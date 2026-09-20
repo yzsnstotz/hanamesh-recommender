@@ -1,0 +1,6 @@
+node_modules/
+dist/
+artifacts/
+*.log
+!docs/acceptance/evidence/*.log
+.DS_Store

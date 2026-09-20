@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "labels": ["REAL_DSH", "REAL_UI", "MOCK"],
+  "dshVersion": "0.1.5-rc.2",
+  "node": "v24.13.1",
+  "ports": {"dsh": 55474, "mock": 55475, "used3080": false},
+  "authMode": "skip-auth (official embedded UI flag; Host/Origin fence retained)",
+  "environment": {"temporaryHome": true, "temporaryDshHome": true, "inheritedCredentialVariables": 0},
+  "ui": {
+    "initialCard": {"name": "RepoMaster", "matchPercent": 92, "reasonCount": 3, "compatibilityRow": true, "buttons": ["install", "details", "alternatives"]},
+    "constraintFollowUp": "localOnly",
+    "noMatch": true,
+    "alternatives": ["RepoMaster", "Local Audit"],
+    "copyOnlyNotice": true,
+    "detailsBrowser": {"url": "https://market.hanamesh.com/hana/repo-master", "pageStatus": "404 for mock-only id", "opened": true},
+    "screenshots": "four inline Codex CUA captures in this acceptance task"
+  },
+  "requests": {
+    "recommend": 3,
+    "feedback": 4,
+    "actions": ["dismiss", "install", "open", "select"],
+    "localOnly": true,
+    "noMatch": true
+  },
+  "storage": {"paths": ["hanamesh_recommender.json"], "onlyOwn": true},
+  "personalDshDiff": 0,
+  "install": {"publicWriteApi": "NOT_AVAILABLE", "fallback": "copy command"},
+  "realHost": "NOT_RUN: hanamesh-server-semantic rc.2 unavailable"
+}

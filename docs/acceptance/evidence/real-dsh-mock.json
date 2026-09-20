@@ -1,0 +1,59 @@
+{
+  "status": "FAIL",
+  "labels": [
+    "REAL_DSH",
+    "REAL_UI",
+    "MOCK"
+  ],
+  "dshVersion": "0.1.5-rc.2",
+  "node": "v24.13.1",
+  "port": 54890,
+  "port3080": false,
+  "environment": {
+    "inheritedCredentialVariables": 0,
+    "keys": [
+      "DSH_HOME",
+      "DSH_TELEMETRY_DISABLED",
+      "HOME",
+      "LANG",
+      "LC_ALL",
+      "NPM_CONFIG_USERCONFIG",
+      "PATH",
+      "npm_config_cache"
+    ]
+  },
+  "install": {
+    "publicWriteApi": "NOT_AVAILABLE"
+  },
+  "requests": {},
+  "screenshots": [],
+  "storage": {
+    "hanameshPaths": [
+      "hanamesh_recommender.json"
+    ],
+    "onlyOwnDomain": true
+  },
+  "personalDsh": {
+    "diff": 0,
+    "before": "8bf3dc13992a92eb",
+    "after": "8bf3dc13992a92eb"
+  },
+  "cleanup": {
+    "chromeStopped": true,
+    "dshStopped": true,
+    "temporaryProfileRemoved": true
+  },
+  "authMode": "skip-auth (official embedded UI flag; Host/Origin fence retained)",
+  "listener": {
+    "status": 200
+  },
+  "hostProbe": {
+    "status": 200,
+    "body": "{\"recommendation\":{\"primary\":{\"objectId\":\"cap.repo-master\",\"hanaId\":\"repo-master\",\"name\":\"RepoMaster\",\"matchPercent\":92,\"reasons\":[\"Repository read\",\"Code modification\",\"Local execution\"],\"checks\":[{\"label\":\"Current environment compatible\",\"ok\":true},{\"label\":\"Local runtime\",\"ok\":true}],\"install\":{\"kind\":\"dsh_plugin\",\"command\":\"dsh plugin add repo-master\"},\"detailsUrl\":\"https://market.hanamesh.com/hana/repo-master\"},\"alternatives\":[{\"objectId\":\"cap.local-audit\",\"hanaId\":\"local-audit\",\"name\":\"Local Audit\",\"matchPercent\":81,\"reasons\":[\"Static analysis\",\"Local-only workflow\"],\"checks\":[{\"label\":\"Current environment compatible\",\"ok\":true},{\"label\":\"Local runtime\",\"ok\":true}],\"install\":{\"kind\":\"dsh_plugin\",\"command\":\"dsh plugin add local-audit\"},\"detailsUrl\":\"https://market.hanamesh.com/hana/local-audit\"}],\"noMatch\":false,\"confidence\":0.92},\"candidates\":[{\"objectId\":\"cap.repo-master\",\"hanaId\":\"repo-master\",\"type\":\"dsh_plugin\",\"name\":\"RepoMaster\",\"score\":0.92,\"summary\":\"Analyze repositories "
+  },
+  "error": "Error: CDP timeout Page.navigate: ay_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[38196:84580528:0920/211129.571645:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[38196:84580478:0920/211130.873151:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[38196:84580528:0920/211130.873228:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n\n    at Timeout._onTimeout (file:///Users/yzliu/work/projects/hanamesh/hanamesh-recommender/scripts/real-dsh-mock.mjs:26:151)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)",
+  "bootTail": [
+    "dsh web: http://127.0.0.1:54890/?token=[REDACTED]",
+    ""
+  ]
+}
