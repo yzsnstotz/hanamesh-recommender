@@ -21,3 +21,11 @@ test('locale normalization is limited to zh, en and ja', () => {
   assert.equal(normalizeLocale('ja-JP'),'ja');
   assert.equal(normalizeLocale('fr-FR'),'en');
 });
+
+test('installed ids are capped at the API-O5 schema limit of 100', async()=>{
+  const loader={entries:()=>Array.from({length:140},(_,index)=>({id:`plugin-${String(index).padStart(3,'0')}`}))};
+  const context=await collectContext({loader,locale:'en',platform:'linux',arch:'x64',dshVersion:'0.1.5-alpha.1'});
+  assert.equal(context.installed.length,100);
+  assert.equal(context.installed[0],'plugin-000');
+  assert.equal(context.installed[99],'plugin-099');
+});

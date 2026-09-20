@@ -15,10 +15,11 @@ async function body(req){const chunks=[];let size=0;for await(const chunk of req
 function send(res,status,value,requestId,extra={}){res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-hanamesh-semantic-mode':'stub','x-request-id':requestId,...extra});res.end(JSON.stringify(value));}
 
 export async function createMockServer({host='127.0.0.1',port=0}={}){
-  const requests=[];
+  const requests=[];let origin='';
   const server=createServer(async(req,res)=>{const requestId=randomUUID();try{
     if(req.method!=='POST'||!['/v1/capabilities/search','/v1/capabilities/recommend','/v1/capabilities/feedback'].includes(req.url)){send(res,404,{error:{code:'SEMANTIC_NOT_FOUND',message:'Unknown route.'}},requestId);return;}
     const input=await body(req);requests.push({path:req.url,origin:req.headers.origin??null,body:input});
+    if(req.headers.origin!==origin){send(res,400,{error:{code:'SEMANTIC_INPUT_INVALID',message:'Origin is not allowed.'}},requestId);return;}
     if(req.url==='/v1/capabilities/feedback'){send(res,200,{ok:true},requestId);return;}
     if(typeof input.query!=='string'||input.query.length<1||input.query.length>500){send(res,400,{error:{code:'SEMANTIC_INPUT_INVALID',message:'query is required.'}},requestId);return;}
     if(/429/iu.test(input.query)){send(res,429,{error:{code:'SEMANTIC_RATE_LIMITED',message:'Try again later.'}},requestId,{'retry-after':'7'});return;}
@@ -27,7 +28,7 @@ export async function createMockServer({host='127.0.0.1',port=0}={}){
     send(res,200,{recommendation:{primary:noMatch?null:rows[0],alternatives:noMatch?rows:rows.slice(1),noMatch,confidence:noMatch?0.18:0.92},candidates,meta:{requestId,latencyMs:2,providers:{embedding:{name:'fixture',mode:'stub'},decision:{name:'fixture',mode:'stub'}}}},requestId);
   }catch{send(res,400,{error:{code:'SEMANTIC_INPUT_INVALID',message:'Malformed request.'}},requestId);}});
   await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,host,resolve);});
-  const address=server.address(),origin=`http://${host}:${address.port}`;
+  const address=server.address();origin=`http://${host}:${address.port}`;
   return {origin,requests,close:()=>new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()))};
 }
 

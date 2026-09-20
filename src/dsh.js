@@ -13,7 +13,7 @@ export {historyDomainSpec};
 function options(config,webServer){
   const serverOrigin=config?.serverOrigin??'https://api.hanamesh.com',timeoutMs=config?.timeoutMs??10_000,dshVersion=config?.dshVersion??DSH_TARGET;
   if(typeof serverOrigin!=='string'||!Number.isSafeInteger(timeoutMs)||timeoutMs<100||timeoutMs>60_000||typeof dshVersion!=='string')throw new TypeError('Invalid recommender config.');
-  return {serverOrigin,timeoutMs,dshVersion,originHeader:`http://127.0.0.1:${webServer.port}`,allowSystemBrowser:config?.allowSystemBrowser!==false};
+  return {serverOrigin,timeoutMs,dshVersion,/* Host contract (hanamesh-server allowedOrigins, same as hanamesh-usage): desktop plugins present the server origin itself as Origin. */originHeader:serverOrigin,allowSystemBrowser:config?.allowSystemBrowser!==false};
 }
 
 export async function mountRecommender(ctx,config={},deps={}){

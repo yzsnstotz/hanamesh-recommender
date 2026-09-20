@@ -1,0 +1,150 @@
+
+> hanamesh-recommender@0.1.0-rc.2 check /Users/yzliu/work/projects/hanamesh/hanamesh-recommender
+> pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack
+
+
+> hanamesh-recommender@0.1.0-rc.2 build /Users/yzliu/work/projects/hanamesh/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","open-external.js","remote.js","routes.js"]}
+
+> hanamesh-recommender@0.1.0-rc.2 test /Users/yzliu/work/projects/hanamesh/hanamesh-recommender
+> node --test --test-reporter=tap test/*.test.mjs
+
+TAP version 13
+# Subtest: client module exposes three locales and registers settings entry plus independent panel
+ok 1 - client module exposes three locales and registers settings entry plus independent panel
+  ---
+  duration_ms: 4.801917
+  type: 'test'
+  ...
+# Subtest: client follow-up mapper implements the same four whitelist constraints
+ok 2 - client follow-up mapper implements the same four whitelist constraints
+  ---
+  duration_ms: 2.856834
+  type: 'test'
+  ...
+# Subtest: recommendation card source includes required content and all four feedback actions
+ok 3 - recommendation card source includes required content and all four feedback actions
+  ---
+  duration_ms: 2.734542
+  type: 'test'
+  ...
+# Subtest: maps the four allowed follow-up constraints and preserves prior constraints
+ok 4 - maps the four allowed follow-up constraints and preserves prior constraints
+  ---
+  duration_ms: 1.023916
+  type: 'test'
+  ...
+# Subtest: appends unmapped follow-up text to query without inventing constraints
+ok 5 - appends unmapped follow-up text to query without inventing constraints
+  ---
+  duration_ms: 0.0895
+  type: 'test'
+  ...
+# Subtest: maps English and Japanese forms and rejects out-of-range more counts
+ok 6 - maps English and Japanese forms and rejects out-of-range more counts
+  ---
+  duration_ms: 0.201125
+  type: 'test'
+  ...
+# Subtest: context contains exactly the documented whitelist and Loader entry ids
+ok 7 - context contains exactly the documented whitelist and Loader entry ids
+  ---
+  duration_ms: 1.18725
+  type: 'test'
+  ...
+# Subtest: locale normalization is limited to zh, en and ja
+ok 8 - locale normalization is limited to zh, en and ja
+  ---
+  duration_ms: 0.082583
+  type: 'test'
+  ...
+# Subtest: installed ids are capped at the API-O5 schema limit of 100
+ok 9 - installed ids are capped at the API-O5 schema limit of 100
+  ---
+  duration_ms: 0.118333
+  type: 'test'
+  ...
+# Subtest: DSH adapter opens one storage domain and registers four exact local routes
+ok 10 - DSH adapter opens one storage domain and registers four exact local routes
+  ---
+  duration_ms: 14.514333
+  type: 'test'
+  ...
+# Subtest: bundle patch stays one insert and carries configurable server origin
+ok 11 - bundle patch stays one insert and carries configurable server origin
+  ---
+  duration_ms: 2.463292
+  type: 'test'
+  ...
+# Subtest: history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+ok 12 - history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+  ---
+  duration_ms: 34.890334
+  type: 'test'
+  ...
+# Subtest: mock implements search, recommend and feedback with stub headers
+ok 13 - mock implements search, recommend and feedback with stub headers
+  ---
+  duration_ms: 18.182875
+  type: 'test'
+  ...
+# Subtest: mock exposes noMatch and 429 as distinct negative cases
+ok 14 - mock exposes noMatch and 429 as distinct negative cases
+  ---
+  duration_ms: 5.623042
+  type: 'test'
+  ...
+# Subtest: remote client rejects non-loopback cleartext origins
+ok 15 - remote client rejects non-loopback cleartext origins
+  ---
+  duration_ms: 0.1115
+  type: 'test'
+  ...
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 16 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 13.822792
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 17 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.323333
+  type: 'test'
+  ...
+# Subtest: details route only opens canonical market Hana URLs
+ok 18 - details route only opens canonical market Hana URLs
+  ---
+  duration_ms: 0.498625
+  type: 'test'
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 19 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.298542
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 121.715791
+
+> hanamesh-recommender@0.1.0-rc.2 test:mutation /Users/yzliu/work/projects/hanamesh/hanamesh-recommender
+> node scripts/mutations.mjs
+
+ERR_ASSERTION MUTATION_KILLED 1/3: free constraint is not applied
+ERR_ASSERTION MUTATION_KILLED 2/3: history exceeds 20 records
+ERR_ASSERTION MUTATION_KILLED 3/3: forwarded Origin is replaced
+MUTATION PASS 3/3
+
+> hanamesh-recommender@0.1.0-rc.2 verify:pack /Users/yzliu/work/projects/hanamesh/hanamesh-recommender
+> node scripts/verify-pack.mjs
+
+{"status":"PASS","package":"hanamesh-recommender@0.1.0-rc.2","fileCount":16,"unpackedSize":42689,"forbiddenDependencies":0,"providerSourceMatches":0,"bundlePatchEntries":1}

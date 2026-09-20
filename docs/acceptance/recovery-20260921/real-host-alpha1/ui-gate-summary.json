@@ -1,0 +1,153 @@
+{
+  "server": "real",
+  "dshOrigin": "http://127.0.0.1:55368/?token=JwHOshi46Gg_UkRCVwUHLJAUUEKuGkyHtS8UZ5-VRB4",
+  "steps": [
+    {
+      "name": "client-module-loaded",
+      "footerAction": true
+    },
+    {
+      "name": "panel-open",
+      "overlay": true
+    },
+    {
+      "name": "dsh-heartbeat-005",
+      "query": "inspect a repository and fix bugs",
+      "match": "50",
+      "reasons": [
+        "✓retrieval_score"
+      ],
+      "checks": [
+        "● available",
+        "● runtime-compatible"
+      ],
+      "buttons": [
+        "Install & use",
+        "Details",
+        "Other choices"
+      ],
+      "noMatch": false,
+      "mode": "stub",
+      "notice": null
+    },
+    {
+      "name": "dsh-heartbeat-005",
+      "noMatch": false,
+      "notice": null,
+      "thread": [
+        "inspect a repository and fix bugs",
+        "dsh-heartbeat-005",
+        "只要本地",
+        "dsh-heartbeat-005"
+      ]
+    },
+    {
+      "name": "install-exit",
+      "copied": "dsh plugin add dsh-heartbeat-005",
+      "notice": "Command copied. DSH has no public install API, so run it in a terminal.\ndsh plugin add dsh-heartbeat-005"
+    },
+    {
+      "name": "details-exit",
+      "buttons": [
+        "Install & use",
+        "Details",
+        "Other choices"
+      ],
+      "notice": "Command copied. DSH has no public install API, so run it in a terminal.\ndsh plugin add dsh-heartbeat-005"
+    },
+    {
+      "name": "alternatives",
+      "alternatives": [
+        "dsh-answer-reviewer-001",
+        "dsh-harness-chat-control-039",
+        "dsh-session-diff-040"
+      ]
+    },
+    {
+      "name": "select-alternative",
+      "notice": "dsh-answer-reviewer-001"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"inspect a repository and fix bugs\",\"locale\":\"en\",\"constraints\":{}}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"inspect a repository and fix bugs\",\"locale\":\"en\",\"constraints\":{\"localOnly\":true}}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"e0ac72fc-32e7-46bc-b7ad-c6c2f2444568\",\"objectId\":\"0a537e1a-7344-4153-8fcf-0717c5b172a3\",\"action\":\"install\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/open-details",
+      "body": "{\"url\":\"https://market.hanamesh.com/hana/00000000-0000-4000-8000-000000000005\"}",
+      "response": {
+        "status": 200,
+        "mode": null
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"e0ac72fc-32e7-46bc-b7ad-c6c2f2444568\",\"objectId\":\"0a537e1a-7344-4153-8fcf-0717c5b172a3\",\"action\":\"open\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"e0ac72fc-32e7-46bc-b7ad-c6c2f2444568\",\"objectId\":\"0a537e1a-7344-4153-8fcf-0717c5b172a3\",\"action\":\"dismiss\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"e0ac72fc-32e7-46bc-b7ad-c6c2f2444568\",\"objectId\":\"6978d2b8-aa9f-4329-8dc9-6a1612056174\",\"action\":\"select\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    }
+  ],
+  "screenshots": [
+    "01-home-with-footer-action.png",
+    "02-panel-open.png",
+    "03-first-recommendation.png",
+    "04-constraint-localonly.png",
+    "05-install-copied-command.png",
+    "06-alternatives.png"
+  ],
+  "history": {
+    "records": 17,
+    "firstKeys": [
+      "requestId",
+      "at",
+      "constraints",
+      "recommendation"
+    ]
+  }
+}

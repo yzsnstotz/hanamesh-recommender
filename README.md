@@ -1,6 +1,6 @@
 # hanamesh-recommender
 
-> `0.1.0-rc.1` · `🧪 DELIVERED` · semantic mode: `stub` · real server gate: `NOT_RUN`
+> `0.1.0-rc.2` · `🧪 DELIVERED`（本机回收 2026-09-21）· 对真实宿主 `hanamesh-server 0.2.0-rc.6`（STUB provider）完成 REAL_HOST；ACCEPTED 由用户给
 
 HanaMesh 的独立 DSH 推荐插件：Conversation + Recommendation Cards、白名单本地 context、追加约束重推、最近 20 次推荐摘要、安装命令/应用库/详情出口与 feedback。
 
@@ -14,7 +14,7 @@ pnpm check
 node scripts/mock-server.mjs
 ```
 
-把隔离 profile 里的 `serverOrigin` 指向 mock 输出的 loopback origin。mock 实现 `/v1/capabilities/search`、`/recommend`、`/feedback`，所有成功响应带 `x-hanamesh-semantic-mode: stub`；query 含 `no-match` 或 `429` 可触发两个负例。
+把隔离 profile 里的 `serverOrigin` 指向 mock 输出的 loopback origin。宿主侧转发时 `Origin` 头 = `serverOrigin` 本身（与 hanamesh-usage 相同，`hanamesh-server` 的 `allowedOrigins` 只信任网站与自身 origin），mock 也按同一规则拒绝其它 Origin。mock 实现 `/v1/capabilities/search`、`/recommend`、`/feedback`，所有成功响应带 `x-hanamesh-semantic-mode: stub`；query 含 `no-match` 或 `429` 可触发两个负例。
 
 安装按钮目前只复制命令，因为钉定 DSH 没有公开安装 API；应用类结果进入 `/hanamesh/library`，详情由宿主打开 `https://market.hanamesh.com/hana/<id>`。不依赖或 import 其他 HanaMesh 客户端插件。
 

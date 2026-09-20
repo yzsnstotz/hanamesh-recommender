@@ -4,3 +4,4 @@ artifacts/
 *.log
 !docs/acceptance/evidence/*.log
 .DS_Store
+!docs/acceptance/recovery-*/*.log

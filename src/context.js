@@ -11,5 +11,6 @@ export async function collectContext({loader,locale,platform=process.platform,ar
   if(typeof loader?.entries!=='function')throw new TypeError('Loader projection is unavailable.');
   const ids=new Set();
   for(const entry of loader.entries())if(!entry?.options?.group&&typeof entry?.id==='string'&&entry.id.length>0)ids.add(entry.id);
-  return Object.freeze({runtime:'local',os:osMap[platform]??'linux',arch:String(arch),dshVersion:String(dshVersion),installed:[...ids].sort(),locale:normalizeLocale(locale)});
+  /** API-O5 schema caps context.installed at 100 unique ids; keep the sorted prefix so the request stays valid on large profiles. */
+  return Object.freeze({runtime:'local',os:osMap[platform]??'linux',arch:String(arch),dshVersion:String(dshVersion),installed:[...ids].sort().slice(0,100),locale:normalizeLocale(locale)});
 }
