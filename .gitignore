@@ -5,3 +5,5 @@ artifacts/
 !docs/acceptance/evidence/*.log
 .DS_Store
 !docs/acceptance/recovery-*/*.log
+!docs/acceptance/rc3-*/*.log
+docs/acceptance/**/chrome-profile/

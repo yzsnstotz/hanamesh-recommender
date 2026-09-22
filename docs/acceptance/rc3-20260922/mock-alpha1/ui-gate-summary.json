@@ -1,0 +1,203 @@
+{
+  "server": "mock",
+  "dshOrigin": "http://127.0.0.1:56915/?token=-zZqBTqEuX0TvziDFqm2A5SFDTnaLkvKq4YvaYrBb_s",
+  "steps": [
+    {
+      "name": "client-module-loaded",
+      "footerAction": true
+    },
+    {
+      "name": "panel-open",
+      "overlay": true
+    },
+    {
+      "name": "RepoMaster",
+      "query": "分析这个仓库并修复 bug",
+      "match": "92",
+      "reasons": [
+        "✓Repository read",
+        "✓Code modification",
+        "✓Local execution"
+      ],
+      "checks": [
+        "● Current environment compatible",
+        "● Local runtime"
+      ],
+      "buttons": [
+        "Start using",
+        "Install & use",
+        "Details",
+        "Other choices"
+      ],
+      "noMatch": false,
+      "mode": "stub",
+      "notice": null
+    },
+    {
+      "name": "RepoMaster",
+      "noMatch": false,
+      "notice": null,
+      "thread": [
+        "分析这个仓库并修复 bug",
+        "RepoMaster",
+        "只要本地",
+        "RepoMaster"
+      ]
+    },
+    {
+      "name": "install-exit",
+      "copied": "dsh plugin add repo-master",
+      "notice": "Install the HanaMesh market (app-host) first.\nInstall command (copied): dsh plugin add repo-master"
+    },
+    {
+      "name": "invoke-exit",
+      "notice": "Install the HanaMesh market (app-host) first.\nInstall command (copied): dsh plugin add repo-master",
+      "toast": null,
+      "panelOpen": true
+    },
+    {
+      "name": "details-exit",
+      "buttons": [
+        "Start using",
+        "Install & use",
+        "Details",
+        "Other choices"
+      ],
+      "notice": "Install the HanaMesh market (app-host) first.\nInstall command (copied): dsh plugin add repo-master"
+    },
+    {
+      "name": "alternatives",
+      "alternatives": [
+        "Local Audit"
+      ]
+    },
+    {
+      "name": "select-alternative",
+      "notice": "Local Audit"
+    },
+    {
+      "name": "no-match",
+      "title": "No suitable match",
+      "alternatives": [
+        "RepoMaster",
+        "Local Audit"
+      ]
+    },
+    {
+      "name": "rate-limited",
+      "notice": "Too many requests. Try again shortly. (7s)"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"分析这个仓库并修复 bug\",\"locale\":\"en\",\"constraints\":{}}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"分析这个仓库并修复 bug\",\"locale\":\"en\",\"constraints\":{\"localOnly\":true}}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/install",
+      "body": "{\"itemId\":\"repo-master\",\"packageName\":\"repo-master\"}",
+      "response": {
+        "status": 503,
+        "mode": null
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/invoke",
+      "body": "{\"itemId\":\"repo-master\",\"packageName\":\"repo-master\",\"kind\":\"plugin\"}",
+      "response": {
+        "status": 503,
+        "mode": null
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/open-details",
+      "body": "{\"url\":\"https://market.hanamesh.com/hana/repo-master\",\"itemId\":\"repo-master\",\"packageName\":\"repo-master\"}",
+      "response": {
+        "status": 200,
+        "mode": null
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"c97cbb7f-6569-49cd-a0c8-687396dd3364\",\"objectId\":\"cap.repo-master\",\"action\":\"open\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"c97cbb7f-6569-49cd-a0c8-687396dd3364\",\"objectId\":\"cap.repo-master\",\"action\":\"dismiss\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/feedback",
+      "body": "{\"requestId\":\"c97cbb7f-6569-49cd-a0c8-687396dd3364\",\"objectId\":\"cap.local-audit\",\"action\":\"select\"}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"分析这个仓库并修复 bug\\nno-match 的任务\",\"locale\":\"en\",\"constraints\":{\"localOnly\":true}}",
+      "response": {
+        "status": 200,
+        "mode": "stub"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/hanamesh/recommender/recommend",
+      "body": "{\"query\":\"分析这个仓库并修复 bug\\nno-match 的任务\\n触发 429\",\"locale\":\"en\",\"constraints\":{\"localOnly\":true}}",
+      "response": {
+        "status": 429,
+        "mode": null
+      }
+    }
+  ],
+  "screenshots": [
+    "01-home-with-footer-action.png",
+    "02-panel-open.png",
+    "03-first-recommendation.png",
+    "04-constraint-localonly.png",
+    "05-install-market-or-degraded.png",
+    "09-invoke-start-using.png",
+    "06-alternatives.png",
+    "07-no-match.png",
+    "08-rate-limited.png"
+  ],
+  "history": {
+    "records": 3,
+    "firstKeys": [
+      "requestId",
+      "at",
+      "constraints",
+      "recommendation"
+    ]
+  }
+}

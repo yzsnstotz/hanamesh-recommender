@@ -71,3 +71,57 @@ rc.1 → rc.2 的改动（全部由本机回收发现并修）：
 **怎么验证：** Node 24.13.1 / pnpm 10.33.0；19/19 单测、3/3 变异、pack 门；真实 Chrome CDP 驱动真实 DSH，截图与请求汇总落盘；宿主库直查 feedback_log。
 **什么还没验证：** 用户 ACCEPTED；rc.2 内核上的 rc.2 字节；线上目录重建完成后的真实候选（sync 中）；Windows/Linux/Intel Mac。
 **新阻塞：** 无。
+
+---
+
+# AC-RECOMMENDER · 0.1.0-rc.3（T5 · HanaMesh 市场席位，2026-09-22）
+
+rc.2 → rc.3 只改一件事：**推荐卡片的三个动作全部落到 HanaMesh 市场（app-host）**，duck-typed 席位 `hanameshMarket`，不 import app-host 包（设计定案 §4、实施计划 T5）。
+
+## 席位契约与降级（最终形状）
+
+宿主侧 `src/dsh.js` 用 `ctx.get('hanameshMarket')` **懒读**席位。**没有写进 `inject`**：本仓钉定的 cordis 4.0.2 只有「全部必需」一种 inject（`Inject` 类型 = 数组或 name→intercept 映射，没有 `optional`），写进去会让本插件在没装 app-host 的官方 DSH 上根本不加载——而契约要求的正是那台机器上要降级可用。`ctx.get` 是 cordis 自己给的「不带 inject 要求的读」，`ctx.hanameshMarket` 直读会抛 `cannot get property "hanameshMarket" without inject`，因此 resolver 外面还包了 try/catch。懒读同时换来：app-host 后装也能被下一次请求看见，无需重载本插件（`dsh.test.mjs` 有此用例）。
+
+| 动作 | 宿主路由 | 席位调用 | 席位缺失 |
+|---|---|---|---|
+| 详情 | `POST /api/hanamesh/recommender/open-details` | `open({itemId?,packageName?})` | 退回 `openSystemBrowser('https://market.hanamesh.com/hana/<id>')`，响应 `via:'browser'` |
+| 安装 | `POST /api/hanamesh/recommender/install` | `install({itemId?,packageName?})` | 503 `RECOMMENDER_MARKET_UNAVAILABLE`；UI 显示「请先安装 HanaMesh 市场（app-host）」+ 复制 `dsh plugin add <pkg>`，不伪造安装 |
+| 开始用（invoke） | `POST /api/hanamesh/recommender/invoke` | 已装应用 → `openApp({appId,…})`；已装插件 → 不调席位，客户端 `uiWorkspace.startSession()` + toast；未装 → `install(...)` | 已装插件（Loader 投影可证）照常新建会话；其余 503 + 同一条可读提示 |
+
+- 每个方法都**先判存在再调**（`market.has(name)` / `methods()`），只实现一部分的席位按方法粒度降级（`RECOMMENDER_MARKET_ACTION_UNAVAILABLE`）。方法调用 `bind(seat)` 保留 receiver（DELIVERY_RULES 坑 #7 的同类）。席位自己抛错一律收敛成 `RECOMMENDER_MARKET_FAILED` 502，不把席位的内部消息/路径透给浏览器。
+- 已装判断：`isInstalled(packageName)` 有就以它为准（`source:'market'`）；没有该方法就退回 Loader 投影（`source:'loader'`，只能证明**已加载**条目，见 `docs/CONTEXT.md`）。
+- 安装结果按席位给的 `status` 如实透传：`install-started` / `restart-required` 两种可读文案，**绝不说成「已启用」**。
+- 客户端 bundle 不 `ctx.get` 任何**宿主**服务（DELIVERY_RULES §1.6）：三动作全部经本包宿主侧路由转发。客户端唯一的 `ctx.get` 是**客户端**服务 `uiWorkspace`（`@deepseek-ai/dsh-client-ui-sidebar` 自己就这么拿它的 `startSession`），同样 duck-typed，拿不到就只留提示不新建会话。
+
+## 门
+
+| 门 | 状态 | 证据（`docs/acceptance/rc3-20260922/`） |
+|---|---|---|
+| RC-01 包内无 provider key/端点/SDK | PASS `CMD` | `check-rc3.log`：`providerSourceMatches: 0` |
+| RC-02 不 import 三个既有插件（含 app-host） | PASS `CMD` | `check-rc3.log`：`forbiddenDependencies: 0`；`verify-pack` 的禁止 import 扫描覆盖新增 `src/market.js` |
+| RC-03 context 六字段白名单（+100 上限） | PASS `CMD` | `check-rc3.log` 34/34；席位只多传卡片自身派生的 `{itemId,packageName,appId}`，context 未变 |
+| RC-04 输入任务 → 完整卡片 | PASS `REAL_DSH`+`REAL_UI`+`MOCK` | `mock-alpha1/03-first-recommendation.png` |
+| RC-05 追加「只要本地」→ `localOnly` 重推 | PASS | `mock-alpha1/ui-gate-summary.json`、`04-constraint-localonly.png` |
+| RC-06 noMatch + alternatives；429 文案 | PASS `MOCK` | `mock-alpha1/07-no-match.png`、`08-rate-limited.png` |
+| RC-07 详情 → 席位 `open`，缺席位退回目录链接 | PASS `CMD` + PASS `REAL_DSH`（降级路） | `routes.test.mjs` 两路都断言；真实门无 app-host，`open-details` 200 走 `via:'browser'`，feedback `open` 落库（`mock-alpha1/ui-gate-summary.json`） |
+| RC-08 安装 → 席位 `install` | PASS `CMD`（席位替身） / PASS `REAL_DSH`（降级路） | `routes.test.mjs`、`client-ui.test.mjs`；真实门 `install` 503 `RECOMMENDER_MARKET_UNAVAILABLE`，UI 显示「Install the HanaMesh market (app-host) first. / Install command (copied): dsh plugin add repo-master」，`05-install-market-or-degraded.png` |
+| RC-09 feedback 回传真实宿主 | PASS（rc.2 沿用，rc.3 未改该路径） | rc.2 段 `real-host-alpha1/ui-gate-summary.json` |
+| RC-10 隔离与 storage 边界 | PASS `REAL_DSH` | `real-dsh-host.json`：隔离 `HOME`/`DSH_HOME` 在 `/private/tmp/hm-t5rec-*`，回环随机端口 56915/56916（非 3080），`personalDshDiff: 0`，storage 仅 `hanamesh_recommender.json`（`onlyOwn: true`），结束后 `pgrep -f /private/tmp/hm-t5rec-` 为空、scratch 已删 |
+| **RC-11 invoke 三态 + 席位缺失降级** | **PASS `CMD`（三态，席位替身）+ PASS `REAL_DSH`（缺席位降级）** | `routes.test.mjs` 的三条 RC-11 + 降级用例、`client-ui.test.mjs` 的三态文案与 toast、`market.test.mjs` 四条 duck-typing 用例；真实门 `09-invoke-start-using.png` 显示四个按钮 `Start using / Install & use / Details / Other choices`，`invoke` 503 后给同一条可读提示，未伪造启用 |
+| 变异 | PASS 6/6（ERR_ASSERTION） | `check-rc3.log`，新增 3 条全在席位路径上 |
+| PLAT | macOS arm64 / DSH 0.1.5-alpha.1（`hanamesh-dsh-runtime` 钉定产物）PASS；其余格子 NOT_RUN（`ENV-MACHINES`） | — |
+
+## 没跑 / 没验证
+
+- **席位真实联调 `NOT_RUN`**：`@hanamesh/dsh-app-host` 要到 rc.32 才 `provide('hanameshMarket')`，本机没有能提供该席位的产物，因此真实 DSH 上只能验到**席位缺失**那一路；`open/install/isInstalled/openApp` 四个方法的真实形状由替身覆盖，联调由派发 session 在 app-host rc.32 到位后跑。
+- 用户 `ACCEPTED`。
+- Windows / Linux / Intel Mac；DSH 0.1.5-rc.2 内核上的 rc.3 字节。
+
+## 四字段 checkpoint（rc.3）
+
+**做了什么：** 新增 `src/market.js`（duck-typed `hanameshMarket` 桥）、两条宿主路由 `install` / `invoke`，`open-details` 改为席位优先、目录链接兜底；卡片加「开始用」按钮并把三动作接到路由；已装插件交给壳的 `uiWorkspace.startSession()` 并留 toast；三语文案补 7 条。
+**怎么验证：** Node 24.13.1 / pnpm 10.33.0；34/34 单测（新增 12 条，含 RC-11 三态与降级）、6/6 变异（新增 3 条全在席位路径）、pack 门；把 rc.3 tgz `dsh plugin add` 进隔离 `/private/tmp/hm-t5rec-*` 的全新 `web` profile（钉定 DSH 0.1.5-alpha.1，来自 `hanamesh-dsh-runtime` 产物），真实 Chrome 经 CDP 走完卡片 / 追加约束 / 三动作 / 候选 / noMatch / 429。
+
+**顺带修的门脚本（不改插件行为）：** `serve-real-dsh-mock.mjs` 原先写死桌面壳里的 DSH 0.1.5-rc.2 与 `--skip-auth`——alpha.1 内核没有这个 flag，且需要它 stdout 上打印的一次性带 token URL 才能进 UI。现在内核路径默认 `hanamesh-dsh-runtime` 产物（`HM_DSH_BIN` 可换），scratch 根与前缀、readiness 超时可配，`--skip-auth` 仅在 `HM_SKIP_AUTH=1` 时加，token URL 自动捕获；写进证据时 token 已打码。
+**什么还没验证：** app-host rc.32 到位后的席位真实联调；用户 ACCEPTED。
+**新阻塞：** 无（联调依赖是排期，不是阻塞）。

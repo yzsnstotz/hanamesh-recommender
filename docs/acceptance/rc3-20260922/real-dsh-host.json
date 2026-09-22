@@ -1,0 +1,35 @@
+[
+  {
+    "status": "READY",
+    "origin": "http://127.0.0.1:56915",
+    "mockOrigin": "http://127.0.0.1:56916",
+    "dshVersion": "0.1.5-alpha.1",
+    "port": 56915,
+    "port3080": false,
+    "authMode": "default",
+    "readyStatus": 303,
+    "authUrl": "http://127.0.0.1:56915/?token=<redacted>",
+    "credentialEnvCount": 0
+  },
+  {
+    "status": "STOPPED",
+    "requests": {
+      "recommend": 4,
+      "feedback": 3,
+      "actions": [
+        "dismiss",
+        "open",
+        "select"
+      ],
+      "localOnly": true,
+      "noMatch": true
+    },
+    "storage": {
+      "paths": [
+        "hanamesh_recommender.json"
+      ],
+      "onlyOwn": true
+    },
+    "personalDshDiff": 0
+  }
+]

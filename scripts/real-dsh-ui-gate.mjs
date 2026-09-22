@@ -66,11 +66,16 @@ if(first.card!==null||first.noMatch){
   const hasCard=await evaluate(`!!document.querySelector('.hmr-card')`);
   if(hasCard){
     await evaluate(`(()=>{navigator.clipboard.writeText=async t=>{window.__hmrCopied=t;};return true;})()`);
-    await click('.hmr-card .hmr-actions button.hmr-primary');await pause(800);
+    await click('.hmr-card .hmr-actions button[data-action=install]');await pause(1200);
     const copied=await evaluate(`({copied:window.__hmrCopied??null,notice:document.querySelector('.hmr-notice')?.textContent??null})`);
-    summary.screenshots.push(await shot('05-install-copied-command'));step('install-exit',copied);
+    summary.screenshots.push(await shot('05-install-market-or-degraded'));step('install-exit',copied);
+    // RC-11 「开始用」: with the hanameshMarket seat this opens/installs through the market; without it, the readable degradation.
+    await click('.hmr-card .hmr-actions button[data-action=invoke]');await pause(1500);
+    const invoked=await evaluate(`({notice:document.querySelector('.hmr-notice')?.textContent??null,toast:document.querySelector('.hmr-toast')?.textContent??null,panelOpen:!!document.querySelector('.hmr-overlay')})`);
+    summary.screenshots.push(await shot('09-invoke-start-using'));step('invoke-exit',invoked);
+    if(!invoked.panelOpen){await click('button.hmr-footer');await until(`!!document.querySelector('.hmr-overlay #hmr-input')`,10000,'panel reopened after invoke');}
     const buttons=await evaluate(`[...document.querySelectorAll('.hmr-card .hmr-actions button')].map(b=>b.textContent)`);
-    await evaluate(`(()=>{const b=[...document.querySelectorAll('.hmr-card .hmr-actions button')].find(x=>x.textContent==='详情'||x.textContent==='Details'||x.textContent==='詳細');b.click();return true;})()`);await pause(1500);
+    await evaluate(`(()=>{const b=[...document.querySelectorAll('.hmr-card .hmr-actions button')].find(x=>x.dataset.action==='details');b.click();return true;})()`);await pause(1500);
     const detailsNotice=await evaluate(`document.querySelector('.hmr-notice')?.textContent??null`);
     step('details-exit',{buttons,notice:detailsNotice});
     await evaluate(`(()=>{const b=[...document.querySelectorAll('.hmr-card .hmr-actions button')].find(x=>x.textContent==='其他选择'||x.textContent==='Other choices'||x.textContent==='ほかの候補');b?.click();return !!b;})()`);await pause(800);
