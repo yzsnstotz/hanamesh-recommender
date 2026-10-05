@@ -1,0 +1,18 @@
+{
+  "atUtc": "2026-10-05T12:09:18.947497+00:00",
+  "source": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "remoteHead": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "status": "clean",
+  "unfinishedGitMarkers": {
+    "MERGE_HEAD": false,
+    "CHERRY_PICK_HEAD": false,
+    "REVERT_HEAD": false,
+    "rebase-merge": false,
+    "rebase-apply": false,
+    "index.lock": false
+  },
+  "github": {
+    "full_name": "yzsnstotz/hanamesh-recommender",
+    "private": true
+  }
+}

@@ -3,7 +3,12 @@ from pathlib import Path
 E=Path(__file__).resolve().parent
 lock=subprocess.check_output(['git','-C','/Users/yzliu/work/projects/hanamesh/hanamesh-recommender','show','49e1b7509cf6736fd5b8484aec05557c56c99398:pnpm-lock.yaml'],text=True)
 def section(lock,kind):return lock.split('\n'+kind+':\n')[1].split('\nsnapshots:\n')[0] if kind=='packages' else lock.split('\nsnapshots:\n')[1]
-def blocks(s):return {m.group(1):m.group(0) for m in re.finditer(r'^  (.+):\n(?:^(?!  [^ ]).*(?:\n|$))*',s,re.M)}
+def blocks(s):
+ starts=list(re.finditer(r'^  \S[^\n]*',s,re.M));out={}
+ for i,m in enumerate(starts):
+  header=m.group();key=header.rsplit(':',1)[0].strip();end=starts[i+1].start() if i+1<len(starts) else len(s)
+  out[key]=s[m.start():end].strip()
+ return out
 basePackages=blocks(section(lock,'packages'));baseSnapshots=blocks(section(lock,'snapshots'))
 report={}
 for label in ['baseline','new']:
