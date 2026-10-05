@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       '@deepseek-ai/dsh-client-ui-settings':
-        specifier: 0.1.5-alpha.1
+        specifier: '>=0.1.5-alpha.1 <0.2.0'
         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)
       '@deepseek-ai/dsh-client-ui-sidebar':
-        specifier: 0.1.5-alpha.1
+        specifier: '>=0.1.5-alpha.1 <0.2.0'
         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)
     devDependencies:
       '@deepseek-ai/cordis':
@@ -27,6 +27,9 @@ importers:
       '@deepseek-ai/dsh-storage-domain':
         specifier: 0.1.5-alpha.1
         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)(@deepseek-ai/dsh-invariants@0.1.5-rc.2(@deepseek-ai/cordis@4.0.2))(@deepseek-ai/dsh-storage@0.1.5-rc.2(@deepseek-ai/cordis@4.0.2))
+      '@hanamesh/devkit':
+        specifier: file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz
+        version: file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -101,6 +104,12 @@ packages:
 
   '@deepseek-ai/schemastery@3.18.2':
     resolution: {integrity: sha512-njDtZsznjYxok7KLLlHOPyuv2efdWVbSflAHgztSfbMsg+CVraEoRe2DjOCgClYv3ZCSm7WXoaUkbB/+RY7tWQ==}
+
+  '@hanamesh/devkit@file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz':
+    resolution: {integrity: sha512-A8gqZ+Lhs86CPZ2+vEOl4NrDi2sbHrrwa2JC6DXJfpNAnSF/WBVhmQrn5YW/JsUrJ4aZbwzvT+xHCrXunvSeaw==, tarball: file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz}
+    version: 0.1.0-rc.1
+    engines: {node: '>=22'}
+    hasBin: true
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -244,6 +253,8 @@ snapshots:
     dependencies:
       '@deepseek-ai/cosmokit': 1.8.3
       '@standard-schema/spec': 1.1.0
+
+  '@hanamesh/devkit@file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz': {}
 
   '@standard-schema/spec@1.1.0': {}
 

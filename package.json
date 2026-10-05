@@ -1,6 +1,6 @@
 {
   "name": "hanamesh-recommender",
-  "version": "0.1.0-rc.3",
+  "version": "0.1.0-rc.4",
   "description": "HanaMesh semantic recommendation client for DSH",
   "type": "module",
   "license": "MIT",
@@ -27,9 +27,12 @@
     "prepack": "pnpm run build",
     "test": "node --test --test-reporter=tap test/*.test.mjs",
     "test:mutation": "node scripts/mutations.mjs",
-    "verify:pack": "node scripts/verify-pack.mjs",
-    "check": "pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
-    "mock": "node scripts/mock-server.mjs"
+    "verify:pack": "pnpm run pack:artifact && node scripts/verify-pack.mjs",
+    "check": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+    "mock": "node scripts/mock-server.mjs",
+    "check:toolchain": "node scripts/check-toolchain.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "pack:artifact": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": ">=4.0.2 <5",
@@ -39,7 +42,8 @@
     "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
     "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
     "react": "18.3.1",
-    "zod": "4.5.4"
+    "zod": "4.5.4",
+    "@hanamesh/devkit": "0.1.0-rc.1"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "4.0.2",
@@ -47,7 +51,8 @@
     "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
     "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
     "react": "18.3.1",
-    "zod": "4.5.4"
+    "zod": "4.5.4",
+    "@hanamesh/devkit": "file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz"
   },
   "dsh": {
     "bundle": {
@@ -67,5 +72,10 @@
   "hanamesh": {
     "module": "recommender",
     "dshTarget": "0.1.5-alpha.1"
+  },
+  "peerDependenciesMeta": {
+    "@hanamesh/devkit": {
+      "optional": true
+    }
   }
 }
