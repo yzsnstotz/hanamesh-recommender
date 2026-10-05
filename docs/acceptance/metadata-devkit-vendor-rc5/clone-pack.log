@@ -1,0 +1,44 @@
+
+> hanamesh-recommender@0.1.0-rc.5 verify:pack /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/preflight/hanamesh-recommender
+> pnpm run pack:artifact && node scripts/verify-pack.mjs
+
+
+> hanamesh-recommender@0.1.0-rc.5 pack:artifact /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/preflight/hanamesh-recommender
+> mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts
+
+npm warn Unknown env config "npm-globalconfig". This will stop working in the next major version of npm.
+npm warn Unknown env config "verify-deps-before-run". This will stop working in the next major version of npm.
+npm warn Unknown env config "_jsr-registry". This will stop working in the next major version of npm.
+npm notice
+npm notice 📦  hanamesh-recommender@0.1.0-rc.5
+npm notice Tarball Contents
+npm notice 991B AGENTS.md
+npm notice 1.1kB LICENSE
+npm notice 3.4kB README.md
+npm notice 23.5kB dist/client-ui.js
+npm notice 2.1kB dist/constraints.js
+npm notice 1.1kB dist/context.js
+npm notice 648B dist/domain.js
+npm notice 3.3kB dist/dsh.js
+npm notice 383B dist/errors.js
+npm notice 1.2kB dist/history.js
+npm notice 2.0kB dist/market.js
+npm notice 640B dist/open-external.js
+npm notice 2.5kB dist/remote.js
+npm notice 8.5kB dist/routes.js
+npm notice 1.5kB docs/CONTEXT.md
+npm notice 1.7kB docs/DEVKIT_VENDOR.md
+npm notice 2.5kB package.json
+npm notice 227B profile/cordis.patch.yml
+npm notice Tarball Details
+npm notice name: hanamesh-recommender
+npm notice version: 0.1.0-rc.5
+npm notice filename: hanamesh-recommender-0.1.0-rc.5.tgz
+npm notice package size: 21.6 kB
+npm notice unpacked size: 57.3 kB
+npm notice shasum: 5a5ae235498b638f2efdcf06cd90aa224b12723f
+npm notice integrity: sha512-I0tNAen0jV/z6[...]IMBvEOt1LW9cQ==
+npm notice total files: 18
+npm notice
+hanamesh-recommender-0.1.0-rc.5.tgz
+{"event":"pack_verified","sha256":"92e211849578413a071226c855a2f2fe272e60ccd7dd6fe479335409c4958b1d","entries":18,"artifactConsumer":false}

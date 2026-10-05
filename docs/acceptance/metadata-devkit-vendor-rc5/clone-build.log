@@ -1,0 +1,5 @@
+
+> hanamesh-recommender@0.1.0-rc.5 build /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/preflight/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
