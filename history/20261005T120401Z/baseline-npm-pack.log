@@ -1,0 +1,110 @@
+
+> hanamesh-recommender@0.1.0-rc.3 prepack
+> pnpm run build
+
+
+> hanamesh-recommender@0.1.0-rc.3 build /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+[
+  {
+    "id": "hanamesh-recommender@0.1.0-rc.3",
+    "name": "hanamesh-recommender",
+    "version": "0.1.0-rc.3",
+    "size": 20321,
+    "unpackedSize": 54698,
+    "shasum": "c9ee5e47a3181dd797bc6c19ce29c24c192b6337",
+    "integrity": "sha512-+adAaCPEQEjHz6bDaR/2b57iZsummI/qh/qnvAyJHg3wsRCcM6mM2Sa++Q/hnakXnWkl8dFvXtCjc9prXLtrHQ==",
+    "filename": "hanamesh-recommender-0.1.0-rc.3.tgz",
+    "files": [
+      {
+        "path": "AGENTS.md",
+        "size": 991,
+        "mode": 420
+      },
+      {
+        "path": "LICENSE",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 2996,
+        "mode": 420
+      },
+      {
+        "path": "dist/client-ui.js",
+        "size": 23547,
+        "mode": 420
+      },
+      {
+        "path": "dist/constraints.js",
+        "size": 2087,
+        "mode": 420
+      },
+      {
+        "path": "dist/context.js",
+        "size": 1068,
+        "mode": 420
+      },
+      {
+        "path": "dist/domain.js",
+        "size": 648,
+        "mode": 420
+      },
+      {
+        "path": "dist/dsh.js",
+        "size": 3307,
+        "mode": 420
+      },
+      {
+        "path": "dist/errors.js",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "dist/history.js",
+        "size": 1183,
+        "mode": 420
+      },
+      {
+        "path": "dist/market.js",
+        "size": 1976,
+        "mode": 420
+      },
+      {
+        "path": "dist/open-external.js",
+        "size": 640,
+        "mode": 420
+      },
+      {
+        "path": "dist/remote.js",
+        "size": 2550,
+        "mode": 420
+      },
+      {
+        "path": "dist/routes.js",
+        "size": 8509,
+        "mode": 420
+      },
+      {
+        "path": "docs/CONTEXT.md",
+        "size": 1497,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2011,
+        "mode": 420
+      },
+      {
+        "path": "profile/cordis.patch.yml",
+        "size": 227,
+        "mode": 420
+      }
+    ],
+    "entryCount": 17,
+    "bundled": []
+  }
+]

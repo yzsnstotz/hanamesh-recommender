@@ -1,0 +1,24 @@
+
+> hanamesh-recommender@0.1.0-rc.3 prepack
+> pnpm run build
+
+
+> hanamesh-recommender@0.1.0-rc.3 build /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+npm error code ENOENT
+npm error syscall open
+npm error path /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender/artifacts/hanamesh-recommender-0.1.0-rc.3.tgz
+npm error errno -2
+npm error enoent ENOENT: no such file or directory, open '/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender/artifacts/hanamesh-recommender-0.1.0-rc.3.tgz'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+{
+  "error": {
+    "code": "ENOENT",
+    "summary": "ENOENT: no such file or directory, open '/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender/artifacts/hanamesh-recommender-0.1.0-rc.3.tgz'",
+    "detail": "This is related to npm not being able to find a file."
+  }
+}
+npm error A complete log of this run can be found in: /var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/hm-recommender-verifier-npm-4osz23jb/_logs/2026-10-05T11_56_36_146Z-debug-0.log

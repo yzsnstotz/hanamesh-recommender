@@ -1,0 +1,49 @@
+{
+  "baseline": {
+    "exitCode": 0
+  },
+  "results": [
+    {
+      "id": "original-0",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "original-1",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "original-2",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "original-3",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "original-4",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "original-5",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    }
+  ]
+}

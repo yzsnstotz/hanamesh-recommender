@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: maps the four allowed follow-up constraints and preserves prior constraints
+ok 1 - maps the four allowed follow-up constraints and preserves prior constraints
+  ---
+  duration_ms: 1.164458
+  type: 'test'
+  ...
+# Subtest: appends unmapped follow-up text to query without inventing constraints
+ok 2 - appends unmapped follow-up text to query without inventing constraints
+  ---
+  duration_ms: 0.104959
+  type: 'test'
+  ...
+# Subtest: maps English and Japanese forms and rejects out-of-range more counts
+ok 3 - maps English and Japanese forms and rejects out-of-range more counts
+  ---
+  duration_ms: 0.221375
+  type: 'test'
+  ...
+# Subtest: history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+ok 4 - history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+  ---
+  duration_ms: 35.830833
+  type: 'test'
+  ...
+# Subtest: mock implements search, recommend and feedback with stub headers
+ok 5 - mock implements search, recommend and feedback with stub headers
+  ---
+  duration_ms: 18.260625
+  type: 'test'
+  ...
+# Subtest: mock exposes noMatch and 429 as distinct negative cases
+ok 6 - mock exposes noMatch and 429 as distinct negative cases
+  ---
+  duration_ms: 4.35625
+  type: 'test'
+  ...
+# Subtest: remote client rejects non-loopback cleartext origins
+ok 7 - remote client rejects non-loopback cleartext origins
+  ---
+  duration_ms: 0.079041
+  type: 'test'
+  ...
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 8 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 11.529917
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 9 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.299667
+  type: 'test'
+  ...
+# Subtest: details route opens the market entry when the seat is there and the catalog link when it is not
+ok 10 - details route opens the market entry when the seat is there and the catalog link when it is not
+  ---
+  duration_ms: 0.770083
+  type: 'test'
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 11 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.138792
+  type: 'test'
+  ...
+# Subtest: install route goes through the market seat and reports a restart when the seat asks for one
+ok 12 - install route goes through the market seat and reports a restart when the seat asks for one
+  ---
+  duration_ms: 0.334959
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke opens an installed app through the market seat
+ok 13 - RC-11 invoke opens an installed app through the market seat
+  ---
+  duration_ms: 0.265583
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke hands an installed plugin to a new session without installing again
+ok 14 - RC-11 invoke hands an installed plugin to a new session without installing again
+  ---
+  duration_ms: 0.362417
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke installs first when nothing is installed and never claims it is enabled
+ok 15 - RC-11 invoke installs first when nothing is installed and never claims it is enabled
+  ---
+  duration_ms: 0.175375
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+ok 16 - RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+  ---
+  duration_ms: 0.529416
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 82.412

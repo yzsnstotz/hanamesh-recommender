@@ -1,0 +1,2043 @@
+{
+  "source": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "baseline": "49e1b7509cf6736fd5b8484aec05557c56c99398",
+  "origin_status": "clean",
+  "origin_remote_head": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "private": {
+    "full_name": "yzsnstotz/hanamesh-recommender",
+    "private": true
+  },
+  "docs_private": {
+    "full_name": "yzsnstotz/hanamesh-docs",
+    "private": true
+  },
+  "protected_files": [
+    "profile/cordis.patch.yml",
+    "scripts/build.mjs",
+    "scripts/mock-server.mjs",
+    "scripts/real-dsh-ui-gate.mjs",
+    "scripts/serve-real-dsh-mock.mjs",
+    "src/client-ui.js",
+    "src/constraints.js",
+    "src/context.js",
+    "src/domain.js",
+    "src/dsh.js",
+    "src/errors.js",
+    "src/history.js",
+    "src/market.js",
+    "src/open-external.js",
+    "src/remote.js",
+    "src/routes.js",
+    "test/client-ui.test.mjs",
+    "test/constraints.test.mjs",
+    "test/context.test.mjs",
+    "test/dsh.test.mjs",
+    "test/history.test.mjs",
+    "test/market.test.mjs",
+    "test/mock-remote.test.mjs",
+    "test/routes.test.mjs"
+  ],
+  "protected_byte_equal": true,
+  "lock_existing_graph_byte_equal_after_exact_normalization": true,
+  "vendor_sha256": "3cf0b621ca2950fbe21c114d5b31ac1a55f97a67eb0a2dada77fb2d3bf2cb6ff",
+  "vendor_sha512_lock_equal": true,
+  "archives": {
+    "baseline": {
+      "sha256": "ddbc8d71c3cad4c7c6d858fabb24e568dd8990942a2f1a7f30c0e4b70c7f95c6",
+      "bytes": 20321,
+      "gzip_header": "1f8b08000000000002ff",
+      "order": [
+        "package/LICENSE",
+        "package/dist/client-ui.js",
+        "package/dist/constraints.js",
+        "package/dist/context.js",
+        "package/dist/domain.js",
+        "package/dist/dsh.js",
+        "package/dist/errors.js",
+        "package/dist/history.js",
+        "package/dist/market.js",
+        "package/dist/open-external.js",
+        "package/dist/remote.js",
+        "package/dist/routes.js",
+        "package/package.json",
+        "package/AGENTS.md",
+        "package/docs/CONTEXT.md",
+        "package/README.md",
+        "package/profile/cordis.patch.yml"
+      ],
+      "members": {
+        "package/LICENSE": {
+          "digest": "a9592d3a90c386e8d5d45d87a9ce8590105d0a799044a8af16f6b26ccb64be69",
+          "size": 1078,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "ed6c31d80f7ef463a890868a704e72a82a5c66bd0f475741634632ad4ad32c8c",
+          "raw_size": "0000002066 \u0000",
+          "raw_checksum": "010271 \u0000"
+        },
+        "package/dist/client-ui.js": {
+          "digest": "ca00d37dec766d68d56fb16ab0bb1b1ae06a5f8fa5f655c8927736890153bf0e",
+          "size": 23547,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "7b3b91e31d1160d678882018bf93890f707807cd15168a85a55af5f58a610985",
+          "raw_size": "0000055773 \u0000",
+          "raw_checksum": "012473 \u0000"
+        },
+        "package/dist/constraints.js": {
+          "digest": "c936a265116a3c80775cc901dc9ea08e336842e6f7c786dbdc5fd00c5a899ba8",
+          "size": 2087,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a105d9feea407199618058b3645deaf6f536dd8f027277928ab35113490288f6",
+          "raw_size": "0000004047 \u0000",
+          "raw_checksum": "013135 \u0000"
+        },
+        "package/dist/context.js": {
+          "digest": "68466bb8a6f95c0d4a84529e810c88e7772150299484669a02b345202f4f1e27",
+          "size": 1068,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "da1c7fb5b41664b271d18b755165120dc85c073816ae454bcedc80efe3865ad9",
+          "raw_size": "0000002054 \u0000",
+          "raw_checksum": "012246 \u0000"
+        },
+        "package/dist/domain.js": {
+          "digest": "e4fbb15b3a72edf2f752456845c9da776420ffcb3bb5d1f23101c9e1213ea965",
+          "size": 648,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "49eab1554abb15b756ea5cf7febb4816fa811d50468aa31efa733359bcb34f46",
+          "raw_size": "0000001210 \u0000",
+          "raw_checksum": "012022 \u0000"
+        },
+        "package/dist/dsh.js": {
+          "digest": "f025c3c52f11624cc831c11d67a5eeecc72c852fefbec8830b1f956cc4ca0133",
+          "size": 3307,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "b7587861fcc2cf14a21a25942fb429cb220259dac29b90da7245e192163bab6b",
+          "raw_size": "0000006353 \u0000",
+          "raw_checksum": "011346 \u0000"
+        },
+        "package/dist/errors.js": {
+          "digest": "ec2774eed7cec814da79e705c904b2fba5c90bb9469bec247c5e6dde364f9a46",
+          "size": 383,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a2c531fb051d3eace90aeb6db8100fdc1c3862f4b32b8e917d5c0b737a8f9434",
+          "raw_size": "0000000577 \u0000",
+          "raw_checksum": "012106 \u0000"
+        },
+        "package/dist/history.js": {
+          "digest": "7e88d7e51e3f0f8dd8494ac038e9f55f6268bd646793532bebb3a1926907d0c1",
+          "size": 1183,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "1fb6b39e57acced6ec666ef1b954014b0fa9a37ddafc3a1319d0e843a8ee1e69",
+          "raw_size": "0000002237 \u0000",
+          "raw_checksum": "012266 \u0000"
+        },
+        "package/dist/market.js": {
+          "digest": "5b26403e1222b5d75409ae82bd783d3ec6a5265e37a6ccddd4e2c051c367eacb",
+          "size": 1976,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "6cce113220321834789cc772da943afccaea07434d11ec038667b9de20fbe3a4",
+          "raw_size": "0000003670 \u0000",
+          "raw_checksum": "012052 \u0000"
+        },
+        "package/dist/open-external.js": {
+          "digest": "c265bf9e475c391549ec55e976d12b875740479ccc01ed805f0c14adffa72919",
+          "size": 640,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "6636e5e339366a03ba4a516cd67f117370b17e1e308b210b249a2d6c35aa44b0",
+          "raw_size": "0000001200 \u0000",
+          "raw_checksum": "013333 \u0000"
+        },
+        "package/dist/remote.js": {
+          "digest": "d9600293fbe65f28461331e76873112b67a312819596dfc3543341b8c55fd645",
+          "size": 2550,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "12b3805f2d9f1b0722dc30905d96e03a66e38284534599273db8f198f69da573",
+          "raw_size": "0000004766 \u0000",
+          "raw_checksum": "012071 \u0000"
+        },
+        "package/dist/routes.js": {
+          "digest": "dcffc73e8d03943a2c41c81fc7f8bbe2b6384ab6da6b226c089eab38b8016ebb",
+          "size": 8509,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "bc0f40f94809e59f5bd97f0b0236cc8701991c3f4e1f8462f34ed9e976dc3434",
+          "raw_size": "0000020475 \u0000",
+          "raw_checksum": "012112 \u0000"
+        },
+        "package/package.json": {
+          "digest": "4c25c7a944ca86e29a2d067ccb2e2ff49ea892112d45c65d81318a45a7fff8d2",
+          "size": 2011,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "fc44eda6a07fec7f2528036b8a2f993c12bd7e2d4a433f24e4a8ab718f5f37b0",
+          "raw_size": "0000003733 \u0000",
+          "raw_checksum": "011554 \u0000"
+        },
+        "package/AGENTS.md": {
+          "digest": "5866b13434aca254e647457b3579e56687358553468e97697c467c8d54e0b7d3",
+          "size": 991,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "f56685df541c0ad3a00e4495e222a6e507b90edbe8375ed652179299b7c085b8",
+          "raw_size": "0000001737 \u0000",
+          "raw_checksum": "010573 \u0000"
+        },
+        "package/docs/CONTEXT.md": {
+          "digest": "a12281c7fb7b2d9210b2e959df97d6c4c4f0d9d1c313022f2017ee5f2152a7fa",
+          "size": 1497,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "8e97c0c56df2dbdf00e9abc89b79eda644907ceecbeeb284618bb3914dacadac",
+          "raw_size": "0000002731 \u0000",
+          "raw_checksum": "011661 \u0000"
+        },
+        "package/README.md": {
+          "digest": "3af38b833260c5e5b41ff1fc7cf5b618d0215e8ee8a23e3e4a4165432d8254c2",
+          "size": 2996,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "497f21f6e3b0c712ba08ad7852718da8186fc4a21512ad85df30841d22caa324",
+          "raw_size": "0000005664 \u0000",
+          "raw_checksum": "010552 \u0000"
+        },
+        "package/profile/cordis.patch.yml": {
+          "digest": "f62dc32aede9b1072f37a20a6e4bd7a0c95694af3f80d16ae5d790c52963c3b6",
+          "size": 227,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "9f41cbbd6462392d25b12358afe3efb1ad8a94419fa44e730bfe691c1aff4fcd",
+          "raw_size": "0000000343 \u0000",
+          "raw_checksum": "014024 \u0000"
+        }
+      },
+      "manifest": {
+        "name": "hanamesh-recommender",
+        "version": "0.1.0-rc.3",
+        "description": "HanaMesh semantic recommendation client for DSH",
+        "type": "module",
+        "license": "MIT",
+        "engines": {
+          "node": "24.13.1"
+        },
+        "packageManager": "pnpm@10.33.0",
+        "main": "./dist/dsh.js",
+        "exports": {
+          ".": "./dist/dsh.js",
+          "./client": "./dist/client-ui.js",
+          "./package.json": "./package.json"
+        },
+        "files": [
+          "dist",
+          "profile",
+          "docs/CONTEXT.md",
+          "README.md",
+          "LICENSE",
+          "AGENTS.md"
+        ],
+        "scripts": {
+          "build": "node scripts/build.mjs",
+          "prepack": "pnpm run build",
+          "test": "node --test --test-reporter=tap test/*.test.mjs",
+          "test:mutation": "node scripts/mutations.mjs",
+          "verify:pack": "node scripts/verify-pack.mjs",
+          "check": "pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+          "mock": "node scripts/mock-server.mjs"
+        },
+        "peerDependencies": {
+          "@deepseek-ai/cordis": ">=4.0.2 <5",
+          "@deepseek-ai/dsh-client-connection": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-host-webserver": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-storage-domain": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
+          "react": "18.3.1",
+          "zod": "4.5.4"
+        },
+        "devDependencies": {
+          "@deepseek-ai/cordis": "4.0.2",
+          "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+          "react": "18.3.1",
+          "zod": "4.5.4"
+        },
+        "dsh": {
+          "bundle": {
+            "patch": "./profile/cordis.patch.yml"
+          },
+          "client": {
+            "inject": [
+              "@deepseek-ai/dsh-client-ui-settings",
+              "@deepseek-ai/dsh-client-ui-sidebar"
+            ],
+            "platform": "web",
+            "external": [
+              "react"
+            ]
+          }
+        },
+        "hanamesh": {
+          "module": "recommender",
+          "dshTarget": "0.1.5-alpha.1"
+        }
+      }
+    },
+    "new": {
+      "sha256": "df0859572cbca375611c3124129b7c0dc90a7a00df7f3f34674255710f4e5653",
+      "bytes": 20481,
+      "gzip_header": "1f8b08000000000002ff",
+      "order": [
+        "package/LICENSE",
+        "package/dist/client-ui.js",
+        "package/dist/constraints.js",
+        "package/dist/context.js",
+        "package/dist/domain.js",
+        "package/dist/dsh.js",
+        "package/dist/errors.js",
+        "package/dist/history.js",
+        "package/dist/market.js",
+        "package/dist/open-external.js",
+        "package/dist/remote.js",
+        "package/dist/routes.js",
+        "package/package.json",
+        "package/AGENTS.md",
+        "package/docs/CONTEXT.md",
+        "package/README.md",
+        "package/profile/cordis.patch.yml"
+      ],
+      "members": {
+        "package/LICENSE": {
+          "digest": "a9592d3a90c386e8d5d45d87a9ce8590105d0a799044a8af16f6b26ccb64be69",
+          "size": 1078,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "ed6c31d80f7ef463a890868a704e72a82a5c66bd0f475741634632ad4ad32c8c",
+          "raw_size": "0000002066 \u0000",
+          "raw_checksum": "010271 \u0000"
+        },
+        "package/dist/client-ui.js": {
+          "digest": "ca00d37dec766d68d56fb16ab0bb1b1ae06a5f8fa5f655c8927736890153bf0e",
+          "size": 23547,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "7b3b91e31d1160d678882018bf93890f707807cd15168a85a55af5f58a610985",
+          "raw_size": "0000055773 \u0000",
+          "raw_checksum": "012473 \u0000"
+        },
+        "package/dist/constraints.js": {
+          "digest": "c936a265116a3c80775cc901dc9ea08e336842e6f7c786dbdc5fd00c5a899ba8",
+          "size": 2087,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a105d9feea407199618058b3645deaf6f536dd8f027277928ab35113490288f6",
+          "raw_size": "0000004047 \u0000",
+          "raw_checksum": "013135 \u0000"
+        },
+        "package/dist/context.js": {
+          "digest": "68466bb8a6f95c0d4a84529e810c88e7772150299484669a02b345202f4f1e27",
+          "size": 1068,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "da1c7fb5b41664b271d18b755165120dc85c073816ae454bcedc80efe3865ad9",
+          "raw_size": "0000002054 \u0000",
+          "raw_checksum": "012246 \u0000"
+        },
+        "package/dist/domain.js": {
+          "digest": "e4fbb15b3a72edf2f752456845c9da776420ffcb3bb5d1f23101c9e1213ea965",
+          "size": 648,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "49eab1554abb15b756ea5cf7febb4816fa811d50468aa31efa733359bcb34f46",
+          "raw_size": "0000001210 \u0000",
+          "raw_checksum": "012022 \u0000"
+        },
+        "package/dist/dsh.js": {
+          "digest": "f025c3c52f11624cc831c11d67a5eeecc72c852fefbec8830b1f956cc4ca0133",
+          "size": 3307,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "b7587861fcc2cf14a21a25942fb429cb220259dac29b90da7245e192163bab6b",
+          "raw_size": "0000006353 \u0000",
+          "raw_checksum": "011346 \u0000"
+        },
+        "package/dist/errors.js": {
+          "digest": "ec2774eed7cec814da79e705c904b2fba5c90bb9469bec247c5e6dde364f9a46",
+          "size": 383,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a2c531fb051d3eace90aeb6db8100fdc1c3862f4b32b8e917d5c0b737a8f9434",
+          "raw_size": "0000000577 \u0000",
+          "raw_checksum": "012106 \u0000"
+        },
+        "package/dist/history.js": {
+          "digest": "7e88d7e51e3f0f8dd8494ac038e9f55f6268bd646793532bebb3a1926907d0c1",
+          "size": 1183,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "1fb6b39e57acced6ec666ef1b954014b0fa9a37ddafc3a1319d0e843a8ee1e69",
+          "raw_size": "0000002237 \u0000",
+          "raw_checksum": "012266 \u0000"
+        },
+        "package/dist/market.js": {
+          "digest": "5b26403e1222b5d75409ae82bd783d3ec6a5265e37a6ccddd4e2c051c367eacb",
+          "size": 1976,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "6cce113220321834789cc772da943afccaea07434d11ec038667b9de20fbe3a4",
+          "raw_size": "0000003670 \u0000",
+          "raw_checksum": "012052 \u0000"
+        },
+        "package/dist/open-external.js": {
+          "digest": "c265bf9e475c391549ec55e976d12b875740479ccc01ed805f0c14adffa72919",
+          "size": 640,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "6636e5e339366a03ba4a516cd67f117370b17e1e308b210b249a2d6c35aa44b0",
+          "raw_size": "0000001200 \u0000",
+          "raw_checksum": "013333 \u0000"
+        },
+        "package/dist/remote.js": {
+          "digest": "d9600293fbe65f28461331e76873112b67a312819596dfc3543341b8c55fd645",
+          "size": 2550,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "12b3805f2d9f1b0722dc30905d96e03a66e38284534599273db8f198f69da573",
+          "raw_size": "0000004766 \u0000",
+          "raw_checksum": "012071 \u0000"
+        },
+        "package/dist/routes.js": {
+          "digest": "dcffc73e8d03943a2c41c81fc7f8bbe2b6384ab6da6b226c089eab38b8016ebb",
+          "size": 8509,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "bc0f40f94809e59f5bd97f0b0236cc8701991c3f4e1f8462f34ed9e976dc3434",
+          "raw_size": "0000020475 \u0000",
+          "raw_checksum": "012112 \u0000"
+        },
+        "package/package.json": {
+          "digest": "56817ccbae23311e37544bc5535c05f6d2aaf43fce906dcafba7f6fdb7939147",
+          "size": 2490,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a7963150476e6e17654616cbd93dd34c099fa777966a4c941a0f127cdc2f111f",
+          "raw_size": "0000004672 \u0000",
+          "raw_checksum": "011557 \u0000"
+        },
+        "package/AGENTS.md": {
+          "digest": "5866b13434aca254e647457b3579e56687358553468e97697c467c8d54e0b7d3",
+          "size": 991,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "f56685df541c0ad3a00e4495e222a6e507b90edbe8375ed652179299b7c085b8",
+          "raw_size": "0000001737 \u0000",
+          "raw_checksum": "010573 \u0000"
+        },
+        "package/docs/CONTEXT.md": {
+          "digest": "a12281c7fb7b2d9210b2e959df97d6c4c4f0d9d1c313022f2017ee5f2152a7fa",
+          "size": 1497,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "8e97c0c56df2dbdf00e9abc89b79eda644907ceecbeeb284618bb3914dacadac",
+          "raw_size": "0000002731 \u0000",
+          "raw_checksum": "011661 \u0000"
+        },
+        "package/README.md": {
+          "digest": "3af38b833260c5e5b41ff1fc7cf5b618d0215e8ee8a23e3e4a4165432d8254c2",
+          "size": 2996,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "497f21f6e3b0c712ba08ad7852718da8186fc4a21512ad85df30841d22caa324",
+          "raw_size": "0000005664 \u0000",
+          "raw_checksum": "010552 \u0000"
+        },
+        "package/profile/cordis.patch.yml": {
+          "digest": "f62dc32aede9b1072f37a20a6e4bd7a0c95694af3f80d16ae5d790c52963c3b6",
+          "size": 227,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "9f41cbbd6462392d25b12358afe3efb1ad8a94419fa44e730bfe691c1aff4fcd",
+          "raw_size": "0000000343 \u0000",
+          "raw_checksum": "014024 \u0000"
+        }
+      },
+      "manifest": {
+        "name": "hanamesh-recommender",
+        "version": "0.1.0-rc.4",
+        "description": "HanaMesh semantic recommendation client for DSH",
+        "type": "module",
+        "license": "MIT",
+        "engines": {
+          "node": "24.13.1"
+        },
+        "packageManager": "pnpm@10.33.0",
+        "main": "./dist/dsh.js",
+        "exports": {
+          ".": "./dist/dsh.js",
+          "./client": "./dist/client-ui.js",
+          "./package.json": "./package.json"
+        },
+        "files": [
+          "dist",
+          "profile",
+          "docs/CONTEXT.md",
+          "README.md",
+          "LICENSE",
+          "AGENTS.md"
+        ],
+        "scripts": {
+          "build": "node scripts/build.mjs",
+          "prepack": "pnpm run build",
+          "test": "node --test --test-reporter=tap test/*.test.mjs",
+          "test:mutation": "node scripts/mutations.mjs",
+          "verify:pack": "pnpm run pack:artifact && node scripts/verify-pack.mjs",
+          "check": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+          "mock": "node scripts/mock-server.mjs",
+          "check:toolchain": "node scripts/check-toolchain.mjs",
+          "preflight": "node scripts/preflight.mjs",
+          "pack:artifact": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
+        },
+        "peerDependencies": {
+          "@deepseek-ai/cordis": ">=4.0.2 <5",
+          "@deepseek-ai/dsh-client-connection": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-host-webserver": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-storage-domain": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
+          "react": "18.3.1",
+          "zod": "4.5.4",
+          "@hanamesh/devkit": "0.1.0-rc.1"
+        },
+        "devDependencies": {
+          "@deepseek-ai/cordis": "4.0.2",
+          "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+          "react": "18.3.1",
+          "zod": "4.5.4",
+          "@hanamesh/devkit": "file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz"
+        },
+        "dsh": {
+          "bundle": {
+            "patch": "./profile/cordis.patch.yml"
+          },
+          "client": {
+            "inject": [
+              "@deepseek-ai/dsh-client-ui-settings",
+              "@deepseek-ai/dsh-client-ui-sidebar"
+            ],
+            "platform": "web",
+            "external": [
+              "react"
+            ]
+          }
+        },
+        "hanamesh": {
+          "module": "recommender",
+          "dshTarget": "0.1.5-alpha.1"
+        },
+        "peerDependenciesMeta": {
+          "@hanamesh/devkit": {
+            "optional": true
+          }
+        }
+      }
+    },
+    "pnpm_variant": {
+      "sha256": "67fc968d1cd76cc48755bc1c816694e0a7c3505714393a373c6361b5a9697a7e",
+      "bytes": 20511,
+      "gzip_header": "1f8b0800000000000013",
+      "order": [
+        "package/LICENSE",
+        "package/dist/client-ui.js",
+        "package/dist/constraints.js",
+        "package/dist/context.js",
+        "package/dist/domain.js",
+        "package/dist/dsh.js",
+        "package/dist/errors.js",
+        "package/dist/history.js",
+        "package/dist/market.js",
+        "package/dist/open-external.js",
+        "package/dist/remote.js",
+        "package/dist/routes.js",
+        "package/package.json",
+        "package/AGENTS.md",
+        "package/docs/CONTEXT.md",
+        "package/README.md",
+        "package/profile/cordis.patch.yml"
+      ],
+      "members": {
+        "package/LICENSE": {
+          "digest": "a9592d3a90c386e8d5d45d87a9ce8590105d0a799044a8af16f6b26ccb64be69",
+          "size": 1078,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "23f69dd72c8e8e2c805831dc02ec028e7e563af8e8efd945b5bdf677e90325fc",
+          "raw_size": "00000002066 ",
+          "raw_checksum": "011631 \u0000"
+        },
+        "package/dist/client-ui.js": {
+          "digest": "ca00d37dec766d68d56fb16ab0bb1b1ae06a5f8fa5f655c8927736890153bf0e",
+          "size": 23547,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "a3867ca60b034630619c0727446cab6c2d3d777db41610531958baba635d32d9",
+          "raw_size": "00000055773 ",
+          "raw_checksum": "014033 \u0000"
+        },
+        "package/dist/constraints.js": {
+          "digest": "c936a265116a3c80775cc901dc9ea08e336842e6f7c786dbdc5fd00c5a899ba8",
+          "size": 2087,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "7ce752ef8a98cfb57cac0c9dca0d8527cdb9a70bed8dd099602b0b4d8194bafe",
+          "raw_size": "00000004047 ",
+          "raw_checksum": "014475 \u0000"
+        },
+        "package/dist/context.js": {
+          "digest": "68466bb8a6f95c0d4a84529e810c88e7772150299484669a02b345202f4f1e27",
+          "size": 1068,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "8b4954020900001891f6bb67c0a21f77c853ec0a03a046ef6846f52b043cf407",
+          "raw_size": "00000002054 ",
+          "raw_checksum": "013606 \u0000"
+        },
+        "package/dist/domain.js": {
+          "digest": "e4fbb15b3a72edf2f752456845c9da776420ffcb3bb5d1f23101c9e1213ea965",
+          "size": 648,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "404085a1b63ed1ed801877aa668ea6e50345a3a5afbbfc9698055bdb9648952f",
+          "raw_size": "00000001210 ",
+          "raw_checksum": "013362 \u0000"
+        },
+        "package/dist/dsh.js": {
+          "digest": "f025c3c52f11624cc831c11d67a5eeecc72c852fefbec8830b1f956cc4ca0133",
+          "size": 3307,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "acbec1bd7db06e87158595276fbe53104ccbb68c790dd3b3b4b8b1c0357c33e5",
+          "raw_size": "00000006353 ",
+          "raw_checksum": "012706 \u0000"
+        },
+        "package/dist/errors.js": {
+          "digest": "ec2774eed7cec814da79e705c904b2fba5c90bb9469bec247c5e6dde364f9a46",
+          "size": 383,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "cb3adb6d35105915bb7ea9e225d39ce99e8d5aae5d5b2906cf2f4258b9e2b3d5",
+          "raw_size": "00000000577 ",
+          "raw_checksum": "013446 \u0000"
+        },
+        "package/dist/history.js": {
+          "digest": "7e88d7e51e3f0f8dd8494ac038e9f55f6268bd646793532bebb3a1926907d0c1",
+          "size": 1183,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "2697793f547e567d4c6c26237097f6fb3e44cf7d69133b29fc042e9113a0ac32",
+          "raw_size": "00000002237 ",
+          "raw_checksum": "013626 \u0000"
+        },
+        "package/dist/market.js": {
+          "digest": "5b26403e1222b5d75409ae82bd783d3ec6a5265e37a6ccddd4e2c051c367eacb",
+          "size": 1976,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "603fbf42e50bfdf9dd6461aceb57b2a557c1fc9004105db6ae17cb3a03b99ae4",
+          "raw_size": "00000003670 ",
+          "raw_checksum": "013412 \u0000"
+        },
+        "package/dist/open-external.js": {
+          "digest": "c265bf9e475c391549ec55e976d12b875740479ccc01ed805f0c14adffa72919",
+          "size": 640,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "76d7b599358fab9c532020e6831bc686c8224416a2b2db6104cf3cfa71134993",
+          "raw_size": "00000001200 ",
+          "raw_checksum": "014673 \u0000"
+        },
+        "package/dist/remote.js": {
+          "digest": "d9600293fbe65f28461331e76873112b67a312819596dfc3543341b8c55fd645",
+          "size": 2550,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "c41e2a84c994284c152dcadf48e514decd9d7b7993e8db8533842664bc02681d",
+          "raw_size": "00000004766 ",
+          "raw_checksum": "013431 \u0000"
+        },
+        "package/dist/routes.js": {
+          "digest": "dcffc73e8d03943a2c41c81fc7f8bbe2b6384ab6da6b226c089eab38b8016ebb",
+          "size": 8509,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "b921f0b4b0273ba6da1f96d40bbeda61c771851c12a7ae1ea601d59f89b7d276",
+          "raw_size": "00000020475 ",
+          "raw_checksum": "013452 \u0000"
+        },
+        "package/package.json": {
+          "digest": "c9e73f27b0c6bf4531b5c4af85187108a02b3f619b2607ff6efbb98cb83f40b5",
+          "size": 2420,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "fc909909d4d993e5c6dae6794c0e524fd04dd1d3df565027b7e9ba7472288937",
+          "raw_size": "00000004564 ",
+          "raw_checksum": "013117 \u0000"
+        },
+        "package/AGENTS.md": {
+          "digest": "5866b13434aca254e647457b3579e56687358553468e97697c467c8d54e0b7d3",
+          "size": 991,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "9c841c42ff3186183b3b2ff43460334e235f2752f0961000b2bd8acf190be06e",
+          "raw_size": "00000001737 ",
+          "raw_checksum": "012133 \u0000"
+        },
+        "package/docs/CONTEXT.md": {
+          "digest": "a12281c7fb7b2d9210b2e959df97d6c4c4f0d9d1c313022f2017ee5f2152a7fa",
+          "size": 1497,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "ec6512f754561f680c2be8ce764de19469482adbda172425a6af6781579d9de4",
+          "raw_size": "00000002731 ",
+          "raw_checksum": "013221 \u0000"
+        },
+        "package/README.md": {
+          "digest": "3af38b833260c5e5b41ff1fc7cf5b618d0215e8ee8a23e3e4a4165432d8254c2",
+          "size": 2996,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "93f042a5c055ab5a576bf25f3823a1964f34adf512a2b41493574a7f9e2568f0",
+          "raw_size": "00000005664 ",
+          "raw_checksum": "012112 \u0000"
+        },
+        "package/profile/cordis.patch.yml": {
+          "digest": "f62dc32aede9b1072f37a20a6e4bd7a0c95694af3f80d16ae5d790c52963c3b6",
+          "size": 227,
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "uname": "",
+          "gname": "",
+          "mtime": 499162500,
+          "type": "0",
+          "linkname": "",
+          "pax_headers": {},
+          "raw_header_sha": "d5f8923dead2f60f14bb0d1652c4b80c8dab4866959fb053b94010164e8d10e6",
+          "raw_size": "00000000343 ",
+          "raw_checksum": "015364 \u0000"
+        }
+      },
+      "manifest": {
+        "name": "hanamesh-recommender",
+        "version": "0.1.0-rc.4",
+        "description": "HanaMesh semantic recommendation client for DSH",
+        "type": "module",
+        "license": "MIT",
+        "engines": {
+          "node": "24.13.1"
+        },
+        "main": "./dist/dsh.js",
+        "exports": {
+          ".": "./dist/dsh.js",
+          "./client": "./dist/client-ui.js",
+          "./package.json": "./package.json"
+        },
+        "files": [
+          "dist",
+          "profile",
+          "docs/CONTEXT.md",
+          "README.md",
+          "LICENSE",
+          "AGENTS.md"
+        ],
+        "peerDependencies": {
+          "@deepseek-ai/cordis": ">=4.0.2 <5",
+          "@deepseek-ai/dsh-client-connection": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-host-webserver": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-storage-domain": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
+          "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
+          "react": "18.3.1",
+          "zod": "4.5.4",
+          "@hanamesh/devkit": "0.1.0-rc.1"
+        },
+        "devDependencies": {
+          "@deepseek-ai/cordis": "4.0.2",
+          "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+          "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+          "react": "18.3.1",
+          "zod": "4.5.4",
+          "@hanamesh/devkit": "file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz"
+        },
+        "dsh": {
+          "bundle": {
+            "patch": "./profile/cordis.patch.yml"
+          },
+          "client": {
+            "inject": [
+              "@deepseek-ai/dsh-client-ui-settings",
+              "@deepseek-ai/dsh-client-ui-sidebar"
+            ],
+            "platform": "web",
+            "external": [
+              "react"
+            ]
+          }
+        },
+        "hanamesh": {
+          "module": "recommender",
+          "dshTarget": "0.1.5-alpha.1"
+        },
+        "peerDependenciesMeta": {
+          "@hanamesh/devkit": {
+            "optional": true
+          }
+        },
+        "scripts": {
+          "build": "node scripts/build.mjs",
+          "test": "node --test --test-reporter=tap test/*.test.mjs",
+          "test:mutation": "node scripts/mutations.mjs",
+          "verify:pack": "pnpm run pack:artifact && node scripts/verify-pack.mjs",
+          "check": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+          "mock": "node scripts/mock-server.mjs",
+          "check:toolchain": "node scripts/check-toolchain.mjs",
+          "preflight": "node scripts/preflight.mjs",
+          "pack:artifact": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
+        }
+      }
+    }
+  },
+  "member_diff": {
+    "package/package.json": {
+      "digest": [
+        "4c25c7a944ca86e29a2d067ccb2e2ff49ea892112d45c65d81318a45a7fff8d2",
+        "56817ccbae23311e37544bc5535c05f6d2aaf43fce906dcafba7f6fdb7939147"
+      ],
+      "size": [
+        2011,
+        2490
+      ],
+      "raw_header_sha": [
+        "fc44eda6a07fec7f2528036b8a2f993c12bd7e2d4a433f24e4a8ab718f5f37b0",
+        "a7963150476e6e17654616cbd93dd34c099fa777966a4c941a0f127cdc2f111f"
+      ],
+      "raw_size": [
+        "0000003733 \u0000",
+        "0000004672 \u0000"
+      ],
+      "raw_checksum": [
+        "011554 \u0000",
+        "011557 \u0000"
+      ]
+    }
+  },
+  "manifest_diff": [
+    {
+      "path": "/devDependencies/@hanamesh/devkit",
+      "old": "<absent>",
+      "new": "file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz"
+    },
+    {
+      "path": "/peerDependencies/@hanamesh/devkit",
+      "old": "<absent>",
+      "new": "0.1.0-rc.1"
+    },
+    {
+      "path": "/peerDependenciesMeta",
+      "old": "<absent>",
+      "new": {
+        "@hanamesh/devkit": {
+          "optional": true
+        }
+      }
+    },
+    {
+      "path": "/scripts/check",
+      "old": "pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+      "new": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack"
+    },
+    {
+      "path": "/scripts/check:toolchain",
+      "old": "<absent>",
+      "new": "node scripts/check-toolchain.mjs"
+    },
+    {
+      "path": "/scripts/pack:artifact",
+      "old": "<absent>",
+      "new": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
+    },
+    {
+      "path": "/scripts/preflight",
+      "old": "<absent>",
+      "new": "node scripts/preflight.mjs"
+    },
+    {
+      "path": "/scripts/verify:pack",
+      "old": "node scripts/verify-pack.mjs",
+      "new": "pnpm run pack:artifact && node scripts/verify-pack.mjs"
+    },
+    {
+      "path": "/version",
+      "old": "0.1.0-rc.3",
+      "new": "0.1.0-rc.4"
+    }
+  ],
+  "pnpm_variant_diff": [
+    {
+      "path": "/packageManager",
+      "old": "pnpm@10.33.0",
+      "new": "<absent>"
+    },
+    {
+      "path": "/scripts/prepack",
+      "old": "pnpm run build",
+      "new": "<absent>"
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "src": {
+        "lines": 374,
+        "bytes": 45898,
+        "files": [
+          {
+            "file": "src/client-ui.js",
+            "bytes": 23547,
+            "lines": 77
+          },
+          {
+            "file": "src/constraints.js",
+            "bytes": 2087,
+            "lines": 25
+          },
+          {
+            "file": "src/context.js",
+            "bytes": 1068,
+            "lines": 16
+          },
+          {
+            "file": "src/domain.js",
+            "bytes": 648,
+            "lines": 9
+          },
+          {
+            "file": "src/dsh.js",
+            "bytes": 3307,
+            "lines": 41
+          },
+          {
+            "file": "src/errors.js",
+            "bytes": 383,
+            "lines": 7
+          },
+          {
+            "file": "src/history.js",
+            "bytes": 1183,
+            "lines": 22
+          },
+          {
+            "file": "src/market.js",
+            "bytes": 1976,
+            "lines": 38
+          },
+          {
+            "file": "src/open-external.js",
+            "bytes": 640,
+            "lines": 9
+          },
+          {
+            "file": "src/remote.js",
+            "bytes": 2550,
+            "lines": 31
+          },
+          {
+            "file": "src/routes.js",
+            "bytes": 8509,
+            "lines": 99
+          }
+        ]
+      },
+      "scripts_tools": {
+        "lines": 192,
+        "bytes": 27593,
+        "files": [
+          {
+            "file": "scripts/build.mjs",
+            "bytes": 907,
+            "lines": 7
+          },
+          {
+            "file": "scripts/mock-server.mjs",
+            "bytes": 4326,
+            "lines": 38
+          },
+          {
+            "file": "scripts/mutations.mjs",
+            "bytes": 1823,
+            "lines": 14
+          },
+          {
+            "file": "scripts/real-dsh-ui-gate.mjs",
+            "bytes": 12219,
+            "lines": 96
+          },
+          {
+            "file": "scripts/serve-real-dsh-mock.mjs",
+            "bytes": 6259,
+            "lines": 26
+          },
+          {
+            "file": "scripts/verify-pack.mjs",
+            "bytes": 2059,
+            "lines": 11
+          }
+        ]
+      },
+      "root_config": {
+        "lines": 385,
+        "bytes": 13126,
+        "files": [
+          {
+            "file": ".gitignore",
+            "bytes": 177,
+            "lines": 9
+          },
+          {
+            "file": "package.json",
+            "bytes": 2011,
+            "lines": 71
+          },
+          {
+            "file": "pnpm-lock.yaml",
+            "bytes": 10938,
+            "lines": 305
+          }
+        ]
+      },
+      "tests": {
+        "lines": 434,
+        "bytes": 30496,
+        "files": [
+          {
+            "file": "test/client-ui.test.mjs",
+            "bytes": 7711,
+            "lines": 120
+          },
+          {
+            "file": "test/constraints.test.mjs",
+            "bytes": 1264,
+            "lines": 24
+          },
+          {
+            "file": "test/context.test.mjs",
+            "bytes": 1609,
+            "lines": 31
+          },
+          {
+            "file": "test/dsh.test.mjs",
+            "bytes": 4245,
+            "lines": 61
+          },
+          {
+            "file": "test/history.test.mjs",
+            "bytes": 1262,
+            "lines": 18
+          },
+          {
+            "file": "test/market.test.mjs",
+            "bytes": 2719,
+            "lines": 44
+          },
+          {
+            "file": "test/mock-remote.test.mjs",
+            "bytes": 2433,
+            "lines": 32
+          },
+          {
+            "file": "test/routes.test.mjs",
+            "bytes": 9253,
+            "lines": 104
+          }
+        ]
+      },
+      "other_tracked": {
+        "lines": 1465,
+        "bytes": 6783848,
+        "files": [
+          {
+            "file": "AGENTS.md",
+            "bytes": 991,
+            "lines": 10
+          },
+          {
+            "file": "LICENSE",
+            "bytes": 1078,
+            "lines": 21
+          },
+          {
+            "file": "README.md",
+            "bytes": 2996,
+            "lines": 31
+          },
+          {
+            "file": "SHA256SUMS",
+            "bytes": 102,
+            "lines": 1
+          },
+          {
+            "file": "docs/CONTEXT.md",
+            "bytes": 1497,
+            "lines": 18
+          },
+          {
+            "file": "docs/LEARNING.md",
+            "bytes": 872,
+            "lines": 7
+          },
+          {
+            "file": "docs/acceptance/AC-RECOMMENDER.md",
+            "bytes": 16163,
+            "lines": 127
+          },
+          {
+            "file": "docs/acceptance/evidence/check.log",
+            "bytes": 5239,
+            "lines": 150
+          },
+          {
+            "file": "docs/acceptance/evidence/real-dsh-cua-summary.json",
+            "bytes": 1290,
+            "lines": 29
+          },
+          {
+            "file": "docs/acceptance/evidence/real-dsh-mock.json",
+            "bytes": 3024,
+            "lines": 59
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/check-rc3.log",
+            "bytes": 9430,
+            "lines": 249
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/01-home-with-footer-action.png",
+            "bytes": 86825,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/03-first-recommendation.png",
+            "bytes": 283978,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/04-constraint-localonly.png",
+            "bytes": 292891,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/05-install-market-or-degraded.png",
+            "bytes": 312543,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/06-alternatives.png",
+            "bytes": 367832,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/07-no-match.png",
+            "bytes": 368321,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/08-rate-limited.png",
+            "bytes": 379140,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/09-invoke-start-using.png",
+            "bytes": 312543,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/ui-gate-summary.json",
+            "bytes": 5433,
+            "lines": 203
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/real-dsh-host.json",
+            "bytes": 696,
+            "lines": 35
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/check-rc2.log",
+            "bytes": 5310,
+            "lines": 150
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/01-home-with-footer-action.png",
+            "bytes": 86825,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/03-first-recommendation.png",
+            "bytes": 281983,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/04-constraint-localonly.png",
+            "bytes": 290303,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/05-install-copied-command.png",
+            "bytes": 310424,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/06-alternatives.png",
+            "bytes": 362716,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/07-no-match.png",
+            "bytes": 364990,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/08-rate-limited.png",
+            "bytes": 375788,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/ui-gate-summary.json",
+            "bytes": 4885,
+            "lines": 185
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/plugin-add-alpha1.log",
+            "bytes": 1395,
+            "lines": 29
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/01-home-with-footer-action.png",
+            "bytes": 86826,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/03-first-recommendation.png",
+            "bytes": 280098,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/04-constraint-localonly.png",
+            "bytes": 290098,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/05-install-copied-command.png",
+            "bytes": 311851,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/06-alternatives.png",
+            "bytes": 319814,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/ui-gate-summary.json",
+            "bytes": 4142,
+            "lines": 153
+          },
+          {
+            "file": "profile/cordis.patch.yml",
+            "bytes": 227,
+            "lines": 8
+          }
+        ]
+      },
+      "dev_fraction_lines": 0.6067297581493165,
+      "dev_fraction_bytes": 0.4701040211505825
+    },
+    "new": {
+      "src": {
+        "lines": 374,
+        "bytes": 45898,
+        "files": [
+          {
+            "file": "src/client-ui.js",
+            "bytes": 23547,
+            "lines": 77
+          },
+          {
+            "file": "src/constraints.js",
+            "bytes": 2087,
+            "lines": 25
+          },
+          {
+            "file": "src/context.js",
+            "bytes": 1068,
+            "lines": 16
+          },
+          {
+            "file": "src/domain.js",
+            "bytes": 648,
+            "lines": 9
+          },
+          {
+            "file": "src/dsh.js",
+            "bytes": 3307,
+            "lines": 41
+          },
+          {
+            "file": "src/errors.js",
+            "bytes": 383,
+            "lines": 7
+          },
+          {
+            "file": "src/history.js",
+            "bytes": 1183,
+            "lines": 22
+          },
+          {
+            "file": "src/market.js",
+            "bytes": 1976,
+            "lines": 38
+          },
+          {
+            "file": "src/open-external.js",
+            "bytes": 640,
+            "lines": 9
+          },
+          {
+            "file": "src/remote.js",
+            "bytes": 2550,
+            "lines": 31
+          },
+          {
+            "file": "src/routes.js",
+            "bytes": 8509,
+            "lines": 99
+          }
+        ]
+      },
+      "scripts_tools": {
+        "lines": 179,
+        "bytes": 24237,
+        "files": [
+          {
+            "file": "scripts/build.mjs",
+            "bytes": 907,
+            "lines": 7
+          },
+          {
+            "file": "scripts/check-toolchain.mjs",
+            "bytes": 141,
+            "lines": 3
+          },
+          {
+            "file": "scripts/mock-server.mjs",
+            "bytes": 4326,
+            "lines": 38
+          },
+          {
+            "file": "scripts/mutations.mjs",
+            "bytes": 131,
+            "lines": 3
+          },
+          {
+            "file": "scripts/preflight.mjs",
+            "bytes": 125,
+            "lines": 3
+          },
+          {
+            "file": "scripts/real-dsh-ui-gate.mjs",
+            "bytes": 12219,
+            "lines": 96
+          },
+          {
+            "file": "scripts/serve-real-dsh-mock.mjs",
+            "bytes": 6259,
+            "lines": 26
+          },
+          {
+            "file": "scripts/verify-pack.mjs",
+            "bytes": 129,
+            "lines": 3
+          }
+        ]
+      },
+      "root_config": {
+        "lines": 468,
+        "bytes": 18581,
+        "files": [
+          {
+            "file": ".gitignore",
+            "bytes": 177,
+            "lines": 9
+          },
+          {
+            "file": "devkit.config.mjs",
+            "bytes": 4424,
+            "lines": 62
+          },
+          {
+            "file": "package.json",
+            "bytes": 2490,
+            "lines": 81
+          },
+          {
+            "file": "pnpm-lock.yaml",
+            "bytes": 11490,
+            "lines": 316
+          }
+        ]
+      },
+      "tests": {
+        "lines": 434,
+        "bytes": 30496,
+        "files": [
+          {
+            "file": "test/client-ui.test.mjs",
+            "bytes": 7711,
+            "lines": 120
+          },
+          {
+            "file": "test/constraints.test.mjs",
+            "bytes": 1264,
+            "lines": 24
+          },
+          {
+            "file": "test/context.test.mjs",
+            "bytes": 1609,
+            "lines": 31
+          },
+          {
+            "file": "test/dsh.test.mjs",
+            "bytes": 4245,
+            "lines": 61
+          },
+          {
+            "file": "test/history.test.mjs",
+            "bytes": 1262,
+            "lines": 18
+          },
+          {
+            "file": "test/market.test.mjs",
+            "bytes": 2719,
+            "lines": 44
+          },
+          {
+            "file": "test/mock-remote.test.mjs",
+            "bytes": 2433,
+            "lines": 32
+          },
+          {
+            "file": "test/routes.test.mjs",
+            "bytes": 9253,
+            "lines": 104
+          }
+        ]
+      },
+      "other_tracked": {
+        "lines": 1466,
+        "bytes": 6789135,
+        "files": [
+          {
+            "file": "AGENTS.md",
+            "bytes": 991,
+            "lines": 10
+          },
+          {
+            "file": "LICENSE",
+            "bytes": 1078,
+            "lines": 21
+          },
+          {
+            "file": "README.md",
+            "bytes": 2996,
+            "lines": 31
+          },
+          {
+            "file": "SHA256SUMS",
+            "bytes": 102,
+            "lines": 1
+          },
+          {
+            "file": "docs/CONTEXT.md",
+            "bytes": 1497,
+            "lines": 18
+          },
+          {
+            "file": "docs/LEARNING.md",
+            "bytes": 872,
+            "lines": 7
+          },
+          {
+            "file": "docs/acceptance/AC-RECOMMENDER.md",
+            "bytes": 16163,
+            "lines": 127
+          },
+          {
+            "file": "docs/acceptance/evidence/check.log",
+            "bytes": 5239,
+            "lines": 150
+          },
+          {
+            "file": "docs/acceptance/evidence/real-dsh-cua-summary.json",
+            "bytes": 1290,
+            "lines": 29
+          },
+          {
+            "file": "docs/acceptance/evidence/real-dsh-mock.json",
+            "bytes": 3024,
+            "lines": 59
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/check-rc3.log",
+            "bytes": 9430,
+            "lines": 249
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/01-home-with-footer-action.png",
+            "bytes": 86825,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/03-first-recommendation.png",
+            "bytes": 283978,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/04-constraint-localonly.png",
+            "bytes": 292891,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/05-install-market-or-degraded.png",
+            "bytes": 312543,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/06-alternatives.png",
+            "bytes": 367832,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/07-no-match.png",
+            "bytes": 368321,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/08-rate-limited.png",
+            "bytes": 379140,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/09-invoke-start-using.png",
+            "bytes": 312543,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/mock-alpha1/ui-gate-summary.json",
+            "bytes": 5433,
+            "lines": 203
+          },
+          {
+            "file": "docs/acceptance/rc3-20260922/real-dsh-host.json",
+            "bytes": 696,
+            "lines": 35
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/check-rc2.log",
+            "bytes": 5310,
+            "lines": 150
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/01-home-with-footer-action.png",
+            "bytes": 86825,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/03-first-recommendation.png",
+            "bytes": 281983,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/04-constraint-localonly.png",
+            "bytes": 290303,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/05-install-copied-command.png",
+            "bytes": 310424,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/06-alternatives.png",
+            "bytes": 362716,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/07-no-match.png",
+            "bytes": 364990,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/08-rate-limited.png",
+            "bytes": 375788,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/mock-alpha1/ui-gate-summary.json",
+            "bytes": 4885,
+            "lines": 185
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/plugin-add-alpha1.log",
+            "bytes": 1395,
+            "lines": 29
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/01-home-with-footer-action.png",
+            "bytes": 86826,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/02-panel-open.png",
+            "bytes": 317763,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/03-first-recommendation.png",
+            "bytes": 280098,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/04-constraint-localonly.png",
+            "bytes": 290098,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/05-install-copied-command.png",
+            "bytes": 311851,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/06-alternatives.png",
+            "bytes": 319814,
+            "lines": null
+          },
+          {
+            "file": "docs/acceptance/recovery-20260921/real-host-alpha1/ui-gate-summary.json",
+            "bytes": 4142,
+            "lines": 153
+          },
+          {
+            "file": "profile/cordis.patch.yml",
+            "bytes": 227,
+            "lines": 8
+          },
+          {
+            "file": "vendor/SHA256SUMS",
+            "bytes": 97,
+            "lines": 1
+          },
+          {
+            "file": "vendor/hanamesh-devkit-0.1.0-rc.1.tgz",
+            "bytes": 5190,
+            "lines": null
+          }
+        ]
+      },
+      "dev_fraction_lines": 0.633692458374143,
+      "dev_fraction_bytes": 0.48264123720636637
+    }
+  }
+}

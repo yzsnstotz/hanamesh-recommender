@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "runtimePackageCount": 31,
+    "packageVersionResolutionAndIntegrityExact": true,
+    "runtimeSnapshotGraphExact": true,
+    "devkitInstalled": false,
+    "strictTsInvalidAssignmentsRejected": 2,
+    "testOverridesOnly": "consumer override pins affect peer range metadata, not resolved versions/integrity or runtime dependency graph"
+  },
+  "new": {
+    "runtimePackageCount": 31,
+    "packageVersionResolutionAndIntegrityExact": true,
+    "runtimeSnapshotGraphExact": true,
+    "devkitInstalled": false,
+    "strictTsInvalidAssignmentsRejected": 2,
+    "testOverridesOnly": "consumer override pins affect peer range metadata, not resolved versions/integrity or runtime dependency graph"
+  }
+}

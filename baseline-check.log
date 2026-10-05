@@ -1,0 +1,243 @@
+
+> hanamesh-recommender@0.1.0-rc.3 check /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack
+
+
+> hanamesh-recommender@0.1.0-rc.3 build /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+
+> hanamesh-recommender@0.1.0-rc.3 test /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node --test --test-reporter=tap test/*.test.mjs
+
+TAP version 13
+# Subtest: client module exposes three locales and registers settings entry plus independent panel
+ok 1 - client module exposes three locales and registers settings entry plus independent panel
+  ---
+  duration_ms: 9.329333
+  type: 'test'
+  ...
+# Subtest: client follow-up mapper implements the same four whitelist constraints
+ok 2 - client follow-up mapper implements the same four whitelist constraints
+  ---
+  duration_ms: 7.713542
+  type: 'test'
+  ...
+# Subtest: recommendation card source includes required content and all four feedback actions
+ok 3 - recommendation card source includes required content and all four feedback actions
+  ---
+  duration_ms: 4.562208
+  type: 'test'
+  ...
+# Subtest: card derives the duck-typed market target and kind from the recommendation itself
+ok 4 - card derives the duck-typed market target and kind from the recommendation itself
+  ---
+  duration_ms: 3.404417
+  type: 'test'
+  ...
+# Subtest: the three card actions post to the market routes with that target
+ok 5 - the three card actions post to the market routes with that target
+  ---
+  duration_ms: 50.027042
+  type: 'test'
+  ...
+# Subtest: RC-11 client renders the three invoke states distinctly
+ok 6 - RC-11 client renders the three invoke states distinctly
+  ---
+  duration_ms: 63.410375
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the market seat the card says so and still offers the command
+ok 7 - RC-11 degradation: without the market seat the card says so and still offers the command
+  ---
+  duration_ms: 29.482458
+  type: 'test'
+  ...
+# Subtest: maps the four allowed follow-up constraints and preserves prior constraints
+ok 8 - maps the four allowed follow-up constraints and preserves prior constraints
+  ---
+  duration_ms: 0.947875
+  type: 'test'
+  ...
+# Subtest: appends unmapped follow-up text to query without inventing constraints
+ok 9 - appends unmapped follow-up text to query without inventing constraints
+  ---
+  duration_ms: 0.094209
+  type: 'test'
+  ...
+# Subtest: maps English and Japanese forms and rejects out-of-range more counts
+ok 10 - maps English and Japanese forms and rejects out-of-range more counts
+  ---
+  duration_ms: 0.197291
+  type: 'test'
+  ...
+# Subtest: context contains exactly the documented whitelist and Loader entry ids
+ok 11 - context contains exactly the documented whitelist and Loader entry ids
+  ---
+  duration_ms: 0.71175
+  type: 'test'
+  ...
+# Subtest: locale normalization is limited to zh, en and ja
+ok 12 - locale normalization is limited to zh, en and ja
+  ---
+  duration_ms: 0.219708
+  type: 'test'
+  ...
+# Subtest: installed ids are capped at the API-O5 schema limit of 100
+ok 13 - installed ids are capped at the API-O5 schema limit of 100
+  ---
+  duration_ms: 0.17025
+  type: 'test'
+  ...
+# Subtest: DSH adapter opens one storage domain and registers six exact local routes
+ok 14 - DSH adapter opens one storage domain and registers six exact local routes
+  ---
+  duration_ms: 17.032333
+  type: 'test'
+  ...
+# Subtest: the market seat is read late through ctx.get and a late app-host is picked up without a reload
+ok 15 - the market seat is read late through ctx.get and a late app-host is picked up without a reload
+  ---
+  duration_ms: 2.206125
+  type: 'test'
+  ...
+# Subtest: a context that refuses uninjected reads degrades instead of throwing
+ok 16 - a context that refuses uninjected reads degrades instead of throwing
+  ---
+  duration_ms: 0.058083
+  type: 'test'
+  ...
+# Subtest: bundle patch stays one insert and carries configurable server origin
+ok 17 - bundle patch stays one insert and carries configurable server origin
+  ---
+  duration_ms: 1.806166
+  type: 'test'
+  ...
+# Subtest: history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+ok 18 - history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+  ---
+  duration_ms: 47.141083
+  type: 'test'
+  ...
+# Subtest: bridge is duck-typed: every method is probed before use and a missing seat degrades
+ok 19 - bridge is duck-typed: every method is probed before use and a missing seat degrades
+  ---
+  duration_ms: 0.776916
+  type: 'test'
+  ...
+# Subtest: a seat that implements only some methods answers for those and refuses the rest
+ok 20 - a seat that implements only some methods answers for those and refuses the rest
+  ---
+  duration_ms: 0.1705
+  type: 'test'
+  ...
+# Subtest: seat methods keep their receiver, are read late, and their failures stay opaque
+ok 21 - seat methods keep their receiver, are read late, and their failures stay opaque
+  ---
+  duration_ms: 2.143625
+  type: 'test'
+  ...
+# Subtest: a throwing or non-object resolver never crashes the plugin
+ok 22 - a throwing or non-object resolver never crashes the plugin
+  ---
+  duration_ms: 0.137625
+  type: 'test'
+  ...
+# Subtest: mock implements search, recommend and feedback with stub headers
+ok 23 - mock implements search, recommend and feedback with stub headers
+  ---
+  duration_ms: 22.728625
+  type: 'test'
+  ...
+# Subtest: mock exposes noMatch and 429 as distinct negative cases
+ok 24 - mock exposes noMatch and 429 as distinct negative cases
+  ---
+  duration_ms: 7.608334
+  type: 'test'
+  ...
+# Subtest: remote client rejects non-loopback cleartext origins
+ok 25 - remote client rejects non-loopback cleartext origins
+  ---
+  duration_ms: 0.104417
+  type: 'test'
+  ...
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 26 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 15.149541
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 27 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.708167
+  type: 'test'
+  ...
+# Subtest: details route opens the market entry when the seat is there and the catalog link when it is not
+ok 28 - details route opens the market entry when the seat is there and the catalog link when it is not
+  ---
+  duration_ms: 1.327541
+  type: 'test'
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 29 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.241125
+  type: 'test'
+  ...
+# Subtest: install route goes through the market seat and reports a restart when the seat asks for one
+ok 30 - install route goes through the market seat and reports a restart when the seat asks for one
+  ---
+  duration_ms: 0.520291
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke opens an installed app through the market seat
+ok 31 - RC-11 invoke opens an installed app through the market seat
+  ---
+  duration_ms: 0.451917
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke hands an installed plugin to a new session without installing again
+ok 32 - RC-11 invoke hands an installed plugin to a new session without installing again
+  ---
+  duration_ms: 0.393417
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke installs first when nothing is installed and never claims it is enabled
+ok 33 - RC-11 invoke installs first when nothing is installed and never claims it is enabled
+  ---
+  duration_ms: 0.188292
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+ok 34 - RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+  ---
+  duration_ms: 1.342041
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 212.304166
+
+> hanamesh-recommender@0.1.0-rc.3 test:mutation /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node scripts/mutations.mjs
+
+ERR_ASSERTION MUTATION_KILLED 1/6: free constraint is not applied
+ERR_ASSERTION MUTATION_KILLED 2/6: history exceeds 20 records
+ERR_ASSERTION MUTATION_KILLED 3/6: forwarded Origin is replaced
+ERR_ASSERTION MUTATION_KILLED 4/6: invoke claims an uninstalled plugin is enabled
+ERR_ASSERTION MUTATION_KILLED 5/6: a seat without isInstalled answers false instead of deferring to the Loader
+ERR_ASSERTION MUTATION_KILLED 6/6: details ignores the market seat
+MUTATION PASS 6/6
+
+> hanamesh-recommender@0.1.0-rc.3 verify:pack /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender
+> node scripts/verify-pack.mjs
+
+{"status":"PASS","package":"hanamesh-recommender@0.1.0-rc.3","fileCount":17,"unpackedSize":54698,"forbiddenDependencies":0,"providerSourceMatches":0,"bundlePatchEntries":1}

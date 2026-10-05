@@ -1,0 +1,12 @@
+{
+  "removed": [
+    "own baseline checkout/build/dependencies",
+    "own pure consumer runtime",
+    "own pnpm variant build",
+    "/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/hm-recommender-verifier-npm-ujulxo2v"
+  ],
+  "kept": [
+    "latest new checkout/build/archive",
+    "all raw evidence and both rollback archives"
+  ]
+}

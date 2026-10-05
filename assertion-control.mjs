@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile,readFile,rm} from 'node:fs/promises';
+import {join} from 'node:path';
+const [repo,evidence]=process.argv.slice(2);
+const {createRequire}=await import('node:module');const require=createRequire(join(repo,'package.json'));const {runMutations}=await import(require.resolve('@hanamesh/devkit'));
+const root=join(repo,'artifacts/assertion-control-fixture');await mkdir(join(root,'src'),{recursive:true});await mkdir(join(root,'test'),{recursive:true});
+await writeFile(join(root,'package.json'),JSON.stringify({type:'module'}));
+await writeFile(join(root,'src/subject.js'),'export const value=1;\n');
+await writeFile(join(root,'test/control.test.mjs'),"import test from 'node:test'; import assert from 'node:assert/strict'; import {value} from '../src/subject.js'; test('value',()=>assert.equal(value,1));\n");
+await assert.rejects(()=>runMutations({root,evidenceDir:evidence,cases:[{id:'load-error',file:'src/subject.js',from:'export const value=1;',to:"import 'nonexistent-hm-verifier-control'; export const value=1;",test:'test/control.test.mjs'}]}),error=>error.code==='ERR_ASSERTION'&&error.message.includes('MUTATION_NOT_ASSERTION'));
+const tap=await readFile(join(evidence,'load-error.tap'),'utf8');assert.match(tap,/ERR_MODULE_NOT_FOUND/u);assert.doesNotMatch(tap,/ERR_ASSERTION/u);
+await writeFile(join(evidence,'control.json'),JSON.stringify({baselineExit:0,loadingError:'ERR_MODULE_NOT_FOUND',mutantCountedAsKilled:false,runnerRejected:true},null,2)+'\n');
+await rm(root,{recursive:true,force:true});console.log('loading error correctly rejected as non-assertion mutation');

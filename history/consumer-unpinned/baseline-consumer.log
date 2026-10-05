@@ -1,0 +1,23 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +33
++++++++++++++++++++++++++++++++++
+Progress: resolved 33, reused 32, downloaded 1, added 33, done
+
+dependencies:
++ @deepseek-ai/cordis 4.0.2 (4.0.4 is available)
++ @deepseek-ai/dsh-client-connection 0.1.5-alpha.1
++ @deepseek-ai/dsh-client-ui-settings 0.1.5-alpha.1
++ @deepseek-ai/dsh-client-ui-sidebar 0.1.5-alpha.1
++ @deepseek-ai/dsh-host-webserver 0.1.5-alpha.1
++ @deepseek-ai/dsh-storage-domain 0.1.5-alpha.1
++ hanamesh-recommender 0.1.0-rc.3
++ react 18.3.1 (19.3.0 is available)
++ zod 4.5.4 (4.6.5 is available)
+
+Done in 462ms using pnpm v10.33.0
+{"event":"pure_package_js","version":"0.1.0-rc.3","devkitInstalled":false,"publicExports":true}
+{"event":"pure_package_strict_ts","typescript":"5.9.3","allowJs":true,"checkJs":false,"version":"0.1.0-rc.3"}
+negative.ts(2,7): error TS2322: Type 'string' is not assignable to type 'number'.
+negative.ts(3,7): error TS2322: Type 'string[]' is not assignable to type 'number[]'.
+  Type 'string' is not assignable to type 'number'.
+two invalid assignments rejected by JS inference, no ambient declarations or casts

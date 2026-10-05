@@ -1,0 +1,157 @@
+{
+  "source": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "baseline": "49e1b7509cf6736fd5b8484aec05557c56c99398",
+  "origin_status": "clean",
+  "origin_remote_head": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "private": {
+    "full_name": "yzsnstotz/hanamesh-recommender",
+    "private": true
+  },
+  "docs_private": {
+    "full_name": "yzsnstotz/hanamesh-docs",
+    "private": true
+  },
+  "protected_byte_equal": true,
+  "lock_existing_graph_byte_equal_after_exact_normalization": true,
+  "vendor_sha256": "3cf0b621ca2950fbe21c114d5b31ac1a55f97a67eb0a2dada77fb2d3bf2cb6ff",
+  "vendor_sha512_lock_equal": true,
+  "member_diff": {
+    "package/package.json": {
+      "digest": [
+        "4c25c7a944ca86e29a2d067ccb2e2ff49ea892112d45c65d81318a45a7fff8d2",
+        "56817ccbae23311e37544bc5535c05f6d2aaf43fce906dcafba7f6fdb7939147"
+      ],
+      "size": [
+        2011,
+        2490
+      ],
+      "raw_header_sha": [
+        "fc44eda6a07fec7f2528036b8a2f993c12bd7e2d4a433f24e4a8ab718f5f37b0",
+        "a7963150476e6e17654616cbd93dd34c099fa777966a4c941a0f127cdc2f111f"
+      ],
+      "raw_size": [
+        "0000003733 \u0000",
+        "0000004672 \u0000"
+      ],
+      "raw_checksum": [
+        "011554 \u0000",
+        "011557 \u0000"
+      ]
+    }
+  },
+  "manifest_diff": [
+    {
+      "path": "/devDependencies/@hanamesh/devkit",
+      "old": "<absent>",
+      "new": "file:vendor/hanamesh-devkit-0.1.0-rc.1.tgz"
+    },
+    {
+      "path": "/peerDependencies/@hanamesh/devkit",
+      "old": "<absent>",
+      "new": "0.1.0-rc.1"
+    },
+    {
+      "path": "/peerDependenciesMeta",
+      "old": "<absent>",
+      "new": {
+        "@hanamesh/devkit": {
+          "optional": true
+        }
+      }
+    },
+    {
+      "path": "/scripts/check",
+      "old": "pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+      "new": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack"
+    },
+    {
+      "path": "/scripts/check:toolchain",
+      "old": "<absent>",
+      "new": "node scripts/check-toolchain.mjs"
+    },
+    {
+      "path": "/scripts/pack:artifact",
+      "old": "<absent>",
+      "new": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
+    },
+    {
+      "path": "/scripts/preflight",
+      "old": "<absent>",
+      "new": "node scripts/preflight.mjs"
+    },
+    {
+      "path": "/scripts/verify:pack",
+      "old": "node scripts/verify-pack.mjs",
+      "new": "pnpm run pack:artifact && node scripts/verify-pack.mjs"
+    },
+    {
+      "path": "/version",
+      "old": "0.1.0-rc.3",
+      "new": "0.1.0-rc.4"
+    }
+  ],
+  "pnpm_variant_diff": [
+    {
+      "path": "/packageManager",
+      "old": "pnpm@10.33.0",
+      "new": "<absent>"
+    },
+    {
+      "path": "/scripts/prepack",
+      "old": "pnpm run build",
+      "new": "<absent>"
+    }
+  ]
+}
+{
+  "metrics": {
+    "baseline": {
+      "src": {
+        "lines": 374,
+        "bytes": 45898
+      },
+      "scripts_tools": {
+        "lines": 192,
+        "bytes": 27593
+      },
+      "root_config": {
+        "lines": 385,
+        "bytes": 13126
+      },
+      "tests": {
+        "lines": 434,
+        "bytes": 30496
+      },
+      "other_tracked": {
+        "lines": 1465,
+        "bytes": 6783848
+      },
+      "dev_fraction_lines": 0.6067297581493165,
+      "dev_fraction_bytes": 0.4701040211505825
+    },
+    "new": {
+      "src": {
+        "lines": 374,
+        "bytes": 45898
+      },
+      "scripts_tools": {
+        "lines": 179,
+        "bytes": 24237
+      },
+      "root_config": {
+        "lines": 468,
+        "bytes": 18581
+      },
+      "tests": {
+        "lines": 434,
+        "bytes": 30496
+      },
+      "other_tracked": {
+        "lines": 1466,
+        "bytes": 6789135
+      },
+      "dev_fraction_lines": 0.633692458374143,
+      "dev_fraction_bytes": 0.48264123720636637
+    }
+  }
+}

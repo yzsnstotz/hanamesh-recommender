@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 1 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 10.331709
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 2 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.339833
+  type: 'test'
+  ...
+# Subtest: details route opens the market entry when the seat is there and the catalog link when it is not
+not ok 3 - details route opens the market entry when the seat is there and the catalog link when it is not
+  ---
+  duration_ms: 0.670167
+  type: 'test'
+  location: '/private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-jMg10W/test/routes.test.mjs:27:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'browser'
+    - 'market'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'market'
+  actual: 'browser'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-jMg10W/test/routes.test.mjs:31:45)
+    async Test.run (node:internal/test_runner/test:1110:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:785:7)
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 4 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.176542
+  type: 'test'
+  ...
+# Subtest: install route goes through the market seat and reports a restart when the seat asks for one
+ok 5 - install route goes through the market seat and reports a restart when the seat asks for one
+  ---
+  duration_ms: 0.427542
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke opens an installed app through the market seat
+ok 6 - RC-11 invoke opens an installed app through the market seat
+  ---
+  duration_ms: 0.280084
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke hands an installed plugin to a new session without installing again
+ok 7 - RC-11 invoke hands an installed plugin to a new session without installing again
+  ---
+  duration_ms: 0.372792
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke installs first when nothing is installed and never claims it is enabled
+ok 8 - RC-11 invoke installs first when nothing is installed and never claims it is enabled
+  ---
+  duration_ms: 0.214083
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+ok 9 - RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+  ---
+  duration_ms: 0.690084
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 8
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.150083

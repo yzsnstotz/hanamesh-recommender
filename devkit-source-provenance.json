@@ -1,0 +1,46 @@
+{
+  "sharedRef": "b2b5c9bb7faa990e3eb9f99007abd6427d62e88b",
+  "vendorSha256": "3cf0b621ca2950fbe21c114d5b31ac1a55f97a67eb0a2dada77fb2d3bf2cb6ff",
+  "members": [
+    {
+      "member": "package/package.json",
+      "upstreamByteEqual": true,
+      "sha256": "4fd95ccb1351fea356865ca5dc9dabbb4696812bf34668d530d5689a1ab1aee6"
+    },
+    {
+      "member": "package/README.md",
+      "upstreamByteEqual": true,
+      "sha256": "1e7f6a14917ae57d63077cbb6aced5afbec1bc846be6d8d4944d6ab5039b4fef"
+    },
+    {
+      "member": "package/src/check-toolchain.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "323b364c45869bc37ced8bea0445b77f209bd339a562ec10a30f7247478ac37f"
+    },
+    {
+      "member": "package/bin/devkit.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "124b8956f7397e9715d9b9de839058c21ac151fdf5fad6578c8b3ad156d3e5c0"
+    },
+    {
+      "member": "package/src/index.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "b997b9b14c09496cf0e579abdb7e4f82f3c8b2a5d4dff649c481a53b76e7794a"
+    },
+    {
+      "member": "package/src/mutations.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "1b9596250f3c68b054d8129d164e977034e24dbdaf36c5b193ccb51fee303a52"
+    },
+    {
+      "member": "package/src/preflight.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "9eec070e9770792ac8041888a998bf555cb8cb91375f15e0ecf59a84d3d98cf2"
+    },
+    {
+      "member": "package/src/verify-pack.mjs",
+      "upstreamByteEqual": true,
+      "sha256": "0f85c0d272093cc5de3c1aedc948d5f3163649cf207c34cdd1f80cb32b7abb0e"
+    }
+  ]
+}

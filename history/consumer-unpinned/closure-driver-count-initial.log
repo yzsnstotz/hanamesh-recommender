@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+30 !== 32
+
+    at file:///Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/consumer.mjs:19:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 30,
+  expected: 32,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.13.1

@@ -1,0 +1,119 @@
+TAP version 13
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 1 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 10.875833
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 2 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.287792
+  type: 'test'
+  ...
+# Subtest: details route opens the market entry when the seat is there and the catalog link when it is not
+ok 3 - details route opens the market entry when the seat is there and the catalog link when it is not
+  ---
+  duration_ms: 0.760083
+  type: 'test'
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 4 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.136208
+  type: 'test'
+  ...
+# Subtest: install route goes through the market seat and reports a restart when the seat asks for one
+ok 5 - install route goes through the market seat and reports a restart when the seat asks for one
+  ---
+  duration_ms: 0.327875
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke opens an installed app through the market seat
+ok 6 - RC-11 invoke opens an installed app through the market seat
+  ---
+  duration_ms: 0.260708
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke hands an installed plugin to a new session without installing again
+not ok 7 - RC-11 invoke hands an installed plugin to a new session without installing again
+  ---
+  duration_ms: 0.85475
+  type: 'test'
+  location: '/private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-4mGeux/test/routes.test.mjs:69:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    +   installed: false,
+    -   installed: true,
+        kind: 'plugin',
+    +   restartRequired: false,
+    +   source: 'market',
+    +   state: 'install-started',
+    +   status: null
+    -   source: 'loader',
+    -   startSession: true,
+    -   state: 'plugin-enabled'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    state: 'plugin-enabled'
+    installed: true
+    kind: 'plugin'
+    startSession: true
+    source: 'loader'
+  actual:
+    state: 'install-started'
+    installed: false
+    kind: 'plugin'
+    status: ~
+    restartRequired: false
+    source: 'market'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-4mGeux/test/routes.test.mjs:78:10)
+    async Test.run (node:internal/test_runner/test:1110:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:785:7)
+  ...
+# Subtest: RC-11 invoke installs first when nothing is installed and never claims it is enabled
+ok 8 - RC-11 invoke installs first when nothing is installed and never claims it is enabled
+  ---
+  duration_ms: 0.5225
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+not ok 9 - RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+  ---
+  duration_ms: 0.470084
+  type: 'test'
+  location: '/private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-4mGeux/test/routes.test.mjs:93:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    503 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 503
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/fy/_vc547vx0t75yjmxm8bbfwb40000gn/T/devkit-mut-4mGeux/test/routes.test.mjs:102:10)
+    async Test.run (node:internal/test_runner/test:1110:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:785:7)
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 7
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.349

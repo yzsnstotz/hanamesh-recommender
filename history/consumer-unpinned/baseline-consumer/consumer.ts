@@ -1,0 +1,10 @@
+import {name,inject,DSH_TARGET,MARKET_SEAT,historyDomainSpec,marketResolver,mountRecommender,apply} from 'hanamesh-recommender';
+const packageName: 'hanamesh-recommender' = name;
+const services: string[] = inject;
+const target: '0.1.5-alpha.1' = DSH_TARGET;
+const seat: 'hanameshMarket' = MARKET_SEAT;
+const domainName: string = historyDomainSpec.name;
+const resolveSeat: () => unknown = marketResolver({get: (_key: string) => undefined});
+const mount: typeof mountRecommender = mountRecommender;
+const pluginApply: typeof apply = apply;
+void [packageName,services,target,seat,domainName,resolveSeat,mount,pluginApply];

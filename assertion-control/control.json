@@ -1,0 +1,6 @@
+{
+  "baselineExit": 0,
+  "loadingError": "ERR_MODULE_NOT_FOUND",
+  "mutantCountedAsKilled": false,
+  "runnerRejected": true
+}

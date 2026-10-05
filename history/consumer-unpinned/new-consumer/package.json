@@ -1,0 +1,16 @@
+{
+  "name": "recommender-pure-consumer",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.2",
+    "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+    "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+    "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-settings": "0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-sidebar": "0.1.5-alpha.1",
+    "react": "18.3.1",
+    "zod": "4.5.4",
+    "hanamesh-recommender": "file:/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/hanamesh-recommender-0.1.0-rc.4.tgz"
+  }
+}

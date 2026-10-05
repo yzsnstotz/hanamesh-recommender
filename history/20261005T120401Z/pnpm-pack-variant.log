@@ -1,0 +1,30 @@
+
+> hanamesh-recommender@0.1.0-rc.4 prepack /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> pnpm run build
+
+
+> hanamesh-recommender@0.1.0-rc.4 build /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+📦  hanamesh-recommender@0.1.0-rc.4
+Tarball Contents
+AGENTS.md
+dist/client-ui.js
+dist/constraints.js
+dist/context.js
+dist/domain.js
+dist/dsh.js
+dist/errors.js
+dist/history.js
+dist/market.js
+dist/open-external.js
+dist/remote.js
+dist/routes.js
+docs/CONTEXT.md
+LICENSE
+package.json
+profile/cordis.patch.yml
+README.md
+Tarball Details
+/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender/artifacts/variant/hanamesh-recommender-0.1.0-rc.4.tgz

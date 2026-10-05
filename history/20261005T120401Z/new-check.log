@@ -1,0 +1,289 @@
+
+> hanamesh-recommender@0.1.0-rc.4 check /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack
+
+
+> hanamesh-recommender@0.1.0-rc.4 check:toolchain /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node scripts/check-toolchain.mjs
+
+{"event":"toolchain_verified","node":"24.13.1","pnpm":"10.33.0"}
+
+> hanamesh-recommender@0.1.0-rc.4 preflight /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node scripts/preflight.mjs
+
+
+> hanamesh-recommender@0.1.0-rc.4 build /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+
+> hanamesh-recommender@0.1.0-rc.4 test /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node --test --test-reporter=tap test/*.test.mjs
+
+TAP version 13
+# Subtest: client module exposes three locales and registers settings entry plus independent panel
+ok 1 - client module exposes three locales and registers settings entry plus independent panel
+  ---
+  duration_ms: 10.142125
+  type: 'test'
+  ...
+# Subtest: client follow-up mapper implements the same four whitelist constraints
+ok 2 - client follow-up mapper implements the same four whitelist constraints
+  ---
+  duration_ms: 5.94275
+  type: 'test'
+  ...
+# Subtest: recommendation card source includes required content and all four feedback actions
+ok 3 - recommendation card source includes required content and all four feedback actions
+  ---
+  duration_ms: 3.008334
+  type: 'test'
+  ...
+# Subtest: card derives the duck-typed market target and kind from the recommendation itself
+ok 4 - card derives the duck-typed market target and kind from the recommendation itself
+  ---
+  duration_ms: 4.364375
+  type: 'test'
+  ...
+# Subtest: the three card actions post to the market routes with that target
+ok 5 - the three card actions post to the market routes with that target
+  ---
+  duration_ms: 59.824166
+  type: 'test'
+  ...
+# Subtest: RC-11 client renders the three invoke states distinctly
+ok 6 - RC-11 client renders the three invoke states distinctly
+  ---
+  duration_ms: 76.235958
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the market seat the card says so and still offers the command
+ok 7 - RC-11 degradation: without the market seat the card says so and still offers the command
+  ---
+  duration_ms: 36.57125
+  type: 'test'
+  ...
+# Subtest: maps the four allowed follow-up constraints and preserves prior constraints
+ok 8 - maps the four allowed follow-up constraints and preserves prior constraints
+  ---
+  duration_ms: 1.529708
+  type: 'test'
+  ...
+# Subtest: appends unmapped follow-up text to query without inventing constraints
+ok 9 - appends unmapped follow-up text to query without inventing constraints
+  ---
+  duration_ms: 0.232292
+  type: 'test'
+  ...
+# Subtest: maps English and Japanese forms and rejects out-of-range more counts
+ok 10 - maps English and Japanese forms and rejects out-of-range more counts
+  ---
+  duration_ms: 0.431916
+  type: 'test'
+  ...
+# Subtest: context contains exactly the documented whitelist and Loader entry ids
+ok 11 - context contains exactly the documented whitelist and Loader entry ids
+  ---
+  duration_ms: 1.364167
+  type: 'test'
+  ...
+# Subtest: locale normalization is limited to zh, en and ja
+ok 12 - locale normalization is limited to zh, en and ja
+  ---
+  duration_ms: 0.189833
+  type: 'test'
+  ...
+# Subtest: installed ids are capped at the API-O5 schema limit of 100
+ok 13 - installed ids are capped at the API-O5 schema limit of 100
+  ---
+  duration_ms: 0.27475
+  type: 'test'
+  ...
+# Subtest: DSH adapter opens one storage domain and registers six exact local routes
+ok 14 - DSH adapter opens one storage domain and registers six exact local routes
+  ---
+  duration_ms: 25.407292
+  type: 'test'
+  ...
+# Subtest: the market seat is read late through ctx.get and a late app-host is picked up without a reload
+ok 15 - the market seat is read late through ctx.get and a late app-host is picked up without a reload
+  ---
+  duration_ms: 3.787458
+  type: 'test'
+  ...
+# Subtest: a context that refuses uninjected reads degrades instead of throwing
+ok 16 - a context that refuses uninjected reads degrades instead of throwing
+  ---
+  duration_ms: 0.060917
+  type: 'test'
+  ...
+# Subtest: bundle patch stays one insert and carries configurable server origin
+ok 17 - bundle patch stays one insert and carries configurable server origin
+  ---
+  duration_ms: 9.267417
+  type: 'test'
+  ...
+# Subtest: history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+ok 18 - history serializes concurrent writes, keeps 20 summaries, and stores no query or context
+  ---
+  duration_ms: 50.197292
+  type: 'test'
+  ...
+# Subtest: bridge is duck-typed: every method is probed before use and a missing seat degrades
+ok 19 - bridge is duck-typed: every method is probed before use and a missing seat degrades
+  ---
+  duration_ms: 1.671583
+  type: 'test'
+  ...
+# Subtest: a seat that implements only some methods answers for those and refuses the rest
+ok 20 - a seat that implements only some methods answers for those and refuses the rest
+  ---
+  duration_ms: 0.245416
+  type: 'test'
+  ...
+# Subtest: seat methods keep their receiver, are read late, and their failures stay opaque
+ok 21 - seat methods keep their receiver, are read late, and their failures stay opaque
+  ---
+  duration_ms: 0.762917
+  type: 'test'
+  ...
+# Subtest: a throwing or non-object resolver never crashes the plugin
+ok 22 - a throwing or non-object resolver never crashes the plugin
+  ---
+  duration_ms: 0.282417
+  type: 'test'
+  ...
+# Subtest: mock implements search, recommend and feedback with stub headers
+ok 23 - mock implements search, recommend and feedback with stub headers
+  ---
+  duration_ms: 37.810333
+  type: 'test'
+  ...
+# Subtest: mock exposes noMatch and 429 as distinct negative cases
+ok 24 - mock exposes noMatch and 429 as distinct negative cases
+  ---
+  duration_ms: 7.055042
+  type: 'test'
+  ...
+# Subtest: remote client rejects non-loopback cleartext origins
+ok 25 - remote client rejects non-loopback cleartext origins
+  ---
+  duration_ms: 0.112167
+  type: 'test'
+  ...
+# Subtest: recommend route adds only the six-field context and stores a summary
+ok 26 - recommend route adds only the six-field context and stores a summary
+  ---
+  duration_ms: 15.90325
+  type: 'test'
+  ...
+# Subtest: feedback route forwards only request id, object id and action
+ok 27 - feedback route forwards only request id, object id and action
+  ---
+  duration_ms: 0.390042
+  type: 'test'
+  ...
+# Subtest: details route opens the market entry when the seat is there and the catalog link when it is not
+ok 28 - details route opens the market entry when the seat is there and the catalog link when it is not
+  ---
+  duration_ms: 5.936125
+  type: 'test'
+  ...
+# Subtest: mutating routes reject cross-origin browser requests
+ok 29 - mutating routes reject cross-origin browser requests
+  ---
+  duration_ms: 0.237459
+  type: 'test'
+  ...
+# Subtest: install route goes through the market seat and reports a restart when the seat asks for one
+ok 30 - install route goes through the market seat and reports a restart when the seat asks for one
+  ---
+  duration_ms: 14.728958
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke opens an installed app through the market seat
+ok 31 - RC-11 invoke opens an installed app through the market seat
+  ---
+  duration_ms: 1.746583
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke hands an installed plugin to a new session without installing again
+ok 32 - RC-11 invoke hands an installed plugin to a new session without installing again
+  ---
+  duration_ms: 0.452833
+  type: 'test'
+  ...
+# Subtest: RC-11 invoke installs first when nothing is installed and never claims it is enabled
+ok 33 - RC-11 invoke installs first when nothing is installed and never claims it is enabled
+  ---
+  duration_ms: 0.168625
+  type: 'test'
+  ...
+# Subtest: RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+ok 34 - RC-11 degradation: without the seat invoke refuses readably, except for a plugin the Loader already shows
+  ---
+  duration_ms: 0.693375
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 245.247292
+
+> hanamesh-recommender@0.1.0-rc.4 test:mutation /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> node scripts/mutations.mjs
+
+{"id":"free-constraint","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+{"id":"history-cap","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+{"id":"origin-forwarding","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+{"id":"uninstalled-plugin","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+{"id":"missing-seat-method","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+{"id":"details-seat","baselineExit":0,"mutantExit":1,"detected":true,"assertionFailure":true}
+
+> hanamesh-recommender@0.1.0-rc.4 verify:pack /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> pnpm run pack:artifact && node scripts/verify-pack.mjs
+
+
+> hanamesh-recommender@0.1.0-rc.4 pack:artifact /Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender
+> mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts
+
+npm warn Unknown env config "npm-globalconfig". This will stop working in the next major version of npm.
+npm warn Unknown env config "verify-deps-before-run". This will stop working in the next major version of npm.
+npm warn Unknown env config "_jsr-registry". This will stop working in the next major version of npm.
+npm notice
+npm notice 📦  hanamesh-recommender@0.1.0-rc.4
+npm notice Tarball Contents
+npm notice 991B AGENTS.md
+npm notice 1.1kB LICENSE
+npm notice 3.0kB README.md
+npm notice 23.5kB dist/client-ui.js
+npm notice 2.1kB dist/constraints.js
+npm notice 1.1kB dist/context.js
+npm notice 648B dist/domain.js
+npm notice 3.3kB dist/dsh.js
+npm notice 383B dist/errors.js
+npm notice 1.2kB dist/history.js
+npm notice 2.0kB dist/market.js
+npm notice 640B dist/open-external.js
+npm notice 2.5kB dist/remote.js
+npm notice 8.5kB dist/routes.js
+npm notice 1.5kB docs/CONTEXT.md
+npm notice 2.5kB package.json
+npm notice 227B profile/cordis.patch.yml
+npm notice Tarball Details
+npm notice name: hanamesh-recommender
+npm notice version: 0.1.0-rc.4
+npm notice filename: hanamesh-recommender-0.1.0-rc.4.tgz
+npm notice package size: 20.5 kB
+npm notice unpacked size: 55.2 kB
+npm notice shasum: 2c80d8bb6ca7526c3ed41baabef53a779afcd741
+npm notice integrity: sha512-hwz9YQ4ri6H67[...]ioVGgri2aP/hw==
+npm notice total files: 17
+npm notice
+hanamesh-recommender-0.1.0-rc.4.tgz
+{"event":"pack_verified","sha256":"df0859572cbca375611c3124129b7c0dc90a7a00df7f3f34674255710f4e5653","entries":17,"artifactConsumer":false}

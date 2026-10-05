@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+import {name,inject,DSH_TARGET,MARKET_SEAT,historyDomainSpec,marketResolver,mountRecommender} from 'hanamesh-recommender';
+const require=createRequire(import.meta.url);
+assert.equal(name,'hanamesh-recommender'); assert.equal(DSH_TARGET,'0.1.5-alpha.1');
+assert.deepEqual(inject,['connection','storageDomain','loader','webServer']);
+assert.equal(MARKET_SEAT,'hanameshMarket'); assert.equal(historyDomainSpec.name,'hanamesh_recommender');
+assert.equal(typeof mountRecommender,'function'); const seat={open(){}};assert.equal(marketResolver({get:n=>n===MARKET_SEAT?seat:undefined})(),seat);
+const pkg=require('hanamesh-recommender/package.json');assert(!pkg.dependencies?.['@hanamesh/devkit']);if(pkg.peerDependencies['@hanamesh/devkit'])assert.equal(pkg.peerDependenciesMeta['@hanamesh/devkit'].optional,true);
+assert.throws(()=>require.resolve('@hanamesh/devkit'),{code:'MODULE_NOT_FOUND'});
+let module;vm.runInNewContext(await readFile(require.resolve('hanamesh-recommender/client'),'utf8'),{window:{__ModuleLoader__:{load:value=>module=value}}});assert.equal(module.id,name);assert.equal(typeof module.factory,'function');
+console.log(JSON.stringify({event:'pure_package_js',version:pkg.version,devkitInstalled:false,publicExports:true}));

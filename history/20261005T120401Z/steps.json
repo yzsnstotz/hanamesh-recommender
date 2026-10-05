@@ -1,0 +1,327 @@
+[
+  {
+    "step": "node-version",
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "pnpm-version",
+    "argv": [
+      "pnpm",
+      "--version"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-clone",
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-recommender",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-checkout",
+    "argv": [
+      "git",
+      "checkout",
+      "-b",
+      "codex/verify-baseline",
+      "49e1b7509cf6736fd5b8484aec05557c56c99398"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-remote",
+    "argv": [
+      "git",
+      "remote",
+      "set-url",
+      "origin",
+      "https://github.com/yzsnstotz/hanamesh-recommender.git"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-original-install",
+    "argv": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--offline"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "step": "baseline-lock-normalization",
+    "argv": [
+      "git",
+      "diff",
+      "--",
+      "pnpm-lock.yaml"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-install",
+    "argv": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--offline"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-check",
+    "argv": [
+      "pnpm",
+      "run",
+      "check"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-npm-pack",
+    "argv": [
+      "npm",
+      "pack",
+      "--json",
+      "--pack-destination",
+      "artifacts"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-compiler",
+    "argv": [
+      "node",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-core/node_modules/typescript/bin/tsc",
+      "--version"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-consumer",
+    "argv": [
+      "node",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/consumer.mjs",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/hanamesh-recommender-0.1.0-rc.3.tgz",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/consumer-run",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-core/node_modules/typescript/bin/tsc"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-clone",
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-recommender",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-checkout",
+    "argv": [
+      "git",
+      "checkout",
+      "-b",
+      "codex/verify-new",
+      "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-remote",
+    "argv": [
+      "git",
+      "remote",
+      "set-url",
+      "origin",
+      "https://github.com/yzsnstotz/hanamesh-recommender.git"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-install",
+    "argv": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--offline"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-check",
+    "argv": [
+      "pnpm",
+      "run",
+      "check"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-npm-pack",
+    "argv": [
+      "npm",
+      "pack",
+      "--json",
+      "--pack-destination",
+      "artifacts"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-global-preflight",
+    "argv": [
+      "bash",
+      "/Users/yzliu/work/Docs/Projects/hanamesh/tools/preflight.sh",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+      "--strict-env"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-source-status",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-compiler",
+    "argv": [
+      "node",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-core/node_modules/typescript/bin/tsc",
+      "--version"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-consumer",
+    "argv": [
+      "node",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/consumer.mjs",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/hanamesh-recommender-0.1.0-rc.4.tgz",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/consumer-run",
+      "/Users/yzliu/work/projects/hanamesh/hanamesh-core/node_modules/typescript/bin/tsc"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "pnpm-pack-variant",
+    "argv": [
+      "pnpm",
+      "pack",
+      "--pack-destination",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender/artifacts/variant"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-npm-pack-restored",
+    "argv": [
+      "npm",
+      "pack",
+      "--json",
+      "--pack-destination",
+      "artifacts"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "new-final-source-status",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "baseline-raw-mutations",
+    "argv": [
+      "node",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/baseline-mutant-driver.mjs",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/baseline/hanamesh-recommender",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/baseline-mutations"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "step": "assertion-control",
+    "argv": [
+      "node",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/assertion-control.mjs",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment/new/hanamesh-recommender",
+      "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/_evidence/verify/assertion-control"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/CONSOLIDATION-03-RECOMMENDER/verifier-environment",
+    "exit": 0,
+    "expected": 0
+  }
+]

@@ -1,0 +1,17 @@
+diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
+index cec0881..ce8b395 100644
+--- a/pnpm-lock.yaml
++++ b/pnpm-lock.yaml
+@@ -9,10 +9,10 @@ importers:
+   .:
+     dependencies:
+       '@deepseek-ai/dsh-client-ui-settings':
+-        specifier: 0.1.5-alpha.1
++        specifier: '>=0.1.5-alpha.1 <0.2.0'
+         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)
+       '@deepseek-ai/dsh-client-ui-sidebar':
+-        specifier: 0.1.5-alpha.1
++        specifier: '>=0.1.5-alpha.1 <0.2.0'
+         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)
+     devDependencies:
+       '@deepseek-ai/cordis':
