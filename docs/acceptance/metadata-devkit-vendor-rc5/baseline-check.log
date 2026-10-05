@@ -1,0 +1,32 @@
+ WARN  Unsupported engine: wanted: {"node":"24.13.1"} (current: {"node":"v22.12.0","pnpm":"10.33.0"})
+
+> hanamesh-recommender@0.1.0-rc.4 check /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/source
+> pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack
+
+ WARN  Unsupported engine: wanted: {"node":"24.13.1"} (current: {"node":"v22.12.0","pnpm":"10.33.0"})
+
+> hanamesh-recommender@0.1.0-rc.4 check:toolchain /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/source
+> node scripts/check-toolchain.mjs
+
+node:internal/modules/run_main:122
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: TOOLCHAIN_MISMATCH node
++ actual - expected
+
++ '22.12.0'
+- '24.13.1'
+
+    at checkToolchain (file:///Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/source/node_modules/.pnpm/@hanamesh+devkit@file+vendor+hanamesh-devkit-0.1.0-rc.1.tgz/node_modules/@hanamesh/devkit/src/check-toolchain.mjs:13:12)
+    at file:///Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/source/scripts/check-toolchain.mjs:3:7 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '22.12.0',
+  expected: '24.13.1',
+  operator: 'strictEqual'
+}
+
+Node.js v22.12.0
+ ELIFECYCLE  Command failed with exit code 1.
+ ELIFECYCLE  Command failed with exit code 1.

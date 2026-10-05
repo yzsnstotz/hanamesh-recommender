@@ -8,13 +8,15 @@ import {tmpdir} from 'node:os';
 const root = fileURLToPath(new URL('.', import.meta.url));
 const pkg = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
 const run = process.env.HANAMESH_RUN_DIR ?? join(tmpdir(), 'hanamesh-recommender-devkit');
-const vendor = 'vendor/hanamesh-devkit-0.1.0-rc.1.tgz';
-const vendorSha = '3cf0b621ca2950fbe21c114d5b31ac1a55f97a67eb0a2dada77fb2d3bf2cb6ff';
+const vendor = 'vendor/hanamesh-devkit-0.1.0-rc.2.tgz';
+const vendorSha = 'ae815e589c3e5a573e407da5c982bb0fc8df15b57683ebbfaccd828d9dd588e0';
 const forbiddenSiblings = ['hanamesh-core', 'hanamesh-usage', '@hanamesh/dsh-app-host'];
-const required = ['dist/dsh.js', 'dist/client-ui.js', 'profile/cordis.patch.yml', 'docs/CONTEXT.md', 'README.md', 'LICENSE', 'AGENTS.md'];
+const required = ['dist/dsh.js', 'dist/client-ui.js', 'profile/cordis.patch.yml', 'docs/CONTEXT.md', 'README.md', 'LICENSE', 'AGENTS.md', 'docs/DEVKIT_VENDOR.md'];
 
 function validateManifest(manifest, patch) {
   assert.equal(manifest.name, 'hanamesh-recommender');
+  assert.equal(manifest.license, 'MIT');
+  assert.equal(Object.hasOwn(manifest, 'private'), false);
   assert.match(manifest.version, /^0\.1\.0-rc\.\d+$/u);
   assert.equal(manifest.dsh.bundle.patch, './profile/cordis.patch.yml');
   assert.equal((patch.match(/^\s*- id:/gm) ?? []).length, 1);
@@ -23,9 +25,16 @@ function validateManifest(manifest, patch) {
     assert.equal(Object.hasOwn(manifest.dependencies ?? {}, name) || Object.hasOwn(manifest.peerDependencies ?? {}, name), false, `forbidden dependency ${name}`);
   }
   assert.equal(Object.hasOwn(manifest.dependencies ?? {}, '@hanamesh/devkit'), false);
-  assert.equal(manifest.peerDependencies['@hanamesh/devkit'], '0.1.0-rc.1');
+  assert.equal(manifest.peerDependencies['@hanamesh/devkit'], '0.1.0-rc.2');
   assert.equal(manifest.peerDependenciesMeta['@hanamesh/devkit'].optional, true);
   assert.equal(manifest.devDependencies['@hanamesh/devkit'], `file:${vendor}`);
+}
+
+function validateVendorRecord(record) {
+  assert.match(record, /@hanamesh\/devkit \| 0\.1\.0-rc\.2 \| SEE LICENSE IN LICENSE/);
+  assert.ok(record.includes(vendorSha));
+  assert.ok(record.includes('067a41e7138ca6a9d8f180991711f1b27aefba5a'));
+  assert.ok(record.includes('Development toolchain, preflight, mutation runner and pack verifier only'));
 }
 
 function validateSource(source, file) {
@@ -39,6 +48,7 @@ export default {
   'check-toolchain': {root, compiler: false, pins: {node: '24.13.1', pnpm: '10.33.0'}},
   preflight: {root, validate: async () => {
     validateManifest(pkg, await readFile(join(root, 'profile/cordis.patch.yml'), 'utf8'));
+    validateVendorRecord(await readFile(join(root, 'docs/DEVKIT_VENDOR.md'), 'utf8'));
     const sourceFiles = (await readdir(join(root, 'src'))).filter(file => file.endsWith('.js'));
     for (const file of sourceFiles) validateSource(await readFile(join(root, 'src', file), 'utf8'), `src/${file}`);
     assert.equal(createHash('sha256').update(await readFile(join(root, vendor))).digest('hex'), vendorSha);
@@ -55,6 +65,7 @@ export default {
     forbidden: /(?:^package\/(?:test|scripts|vendor|node_modules|artifacts)\/)|(?:^package\/\.env$)/u,
     validate: async ({entries, read}) => {
       validateManifest(JSON.parse(read('package.json')), read('profile/cordis.patch.yml').toString());
+      validateVendorRecord(read('docs/DEVKIT_VENDOR.md').toString());
       for (const file of entries.filter(file => /^package\/dist\/.*\.js$/u.test(file))) {
         validateSource(read(file.slice('package/'.length)).toString(), file);
       }

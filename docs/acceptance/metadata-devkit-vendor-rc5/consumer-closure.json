@@ -1,0 +1,14 @@
+{
+  "runtime_packages": 31,
+  "runtime_resolutions_integrity_exact": true,
+  "snapshots_exact": true,
+  "devkit_installed": false,
+  "strict": true,
+  "skipLibCheck": false,
+  "allowJs": true,
+  "checkJs": false,
+  "original_probes_byte_identical": true,
+  "ts_negative_assignments_rejected": 2,
+  "compiler": "5.9.3",
+  "runtime_closure_pins": "temporary consumer overrides copied from original C03; no origin dependency additions"
+}

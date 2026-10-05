@@ -29,3 +29,7 @@ node scripts/mock-server.mjs
 `isInstalled(packageName)` 有就用，没有就退回 Loader 投影（只能证明**已加载**条目）。安装完成 / 需重启由席位的 `status` 如实透传，绝不说成「已启用」。已装插件的「开始用」由客户端 duck-typed 调壳自己的 `uiWorkspace.startSession()`（sidebar 用的同一个客户端服务）并留下一条 toast；拿不到就只留提示。不依赖或 import 其他 HanaMesh 客户端插件。
 
 验证状态见 `docs/acceptance/AC-RECOMMENDER.md`。rc.2 已在隔离真实 DSH 上完成卡片、约束重推、`noMatch`、详情门，并对真实 `hanamesh-server 0.2.0-rc.6` 完成 feedback 的 `REAL_HOST`。rc.3 的席位联调要等 app-host rc.32 提供 `hanameshMarket`，在本机只能验到**席位缺失降级**那一路，联调如实记 `NOT_RUN`。
+
+## Development vendor metadata
+
+Version `0.1.0-rc.5` updates only the existing development devkit vendor to `0.1.0-rc.2`, exact pins and provenance. Runtime source and public API remain unchanged from rc.4. See [the distribution record](docs/DEVKIT_VENDOR.md) for exact name, version, authorization, source, purpose and digest. The earlier runtime evidence above retains its original scope.

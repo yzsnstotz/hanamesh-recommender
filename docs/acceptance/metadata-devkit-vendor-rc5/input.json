@@ -1,0 +1,8 @@
+{
+  "devkit_sha256": "ae815e589c3e5a573e407da5c982bb0fc8df15b57683ebbfaccd828d9dd588e0",
+  "source": "067a41e7138ca6a9d8f180991711f1b27aefba5a",
+  "verify": "69be0faea0b66ae49adf5988ebd1fab093a26290",
+  "base": "a0b3fe854cfbccbb9e0cdb85dff946bb632cd169",
+  "task_remote": "https://github.com/yzsnstotz/hanamesh-recommender.git",
+  "initial_origin_clean": true
+}
