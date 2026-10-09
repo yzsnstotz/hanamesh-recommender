@@ -30,6 +30,6 @@ node scripts/mock-server.mjs
 
 验证状态见 `docs/acceptance/AC-RECOMMENDER.md`。rc.2 已在隔离真实 DSH 上完成卡片、约束重推、`noMatch`、详情门，并对真实 `hanamesh-server 0.2.0-rc.6` 完成 feedback 的 `REAL_HOST`。rc.3 的席位联调要等 app-host rc.32 提供 `hanameshMarket`，在本机只能验到**席位缺失降级**那一路，联调如实记 `NOT_RUN`。
 
-## Development vendor metadata
+## Development Git supply
 
-Version `0.1.0-rc.5` updates only the existing development devkit vendor to `0.1.0-rc.2`, exact pins and provenance. Runtime source and public API remain unchanged from rc.4. See [the distribution record](docs/DEVKIT_VENDOR.md) for exact name, version, authorization, source, purpose and digest. The earlier runtime evidence above retains its original scope.
+Version `0.1.1-rc.1` replaces development Devkit vendor files with the normal Git subdirectory caret range, using pnpm 10.33.0, and removes its unused public optional peer. Normal `npm pack` still runs the existing build lifecycle. Runtime source and public API remain unchanged from rc.5. See [the supply record](docs/DEVKIT_SUPPLY.md) for the source, supported package manager, authorization and purpose. Earlier runtime evidence above retains its original scope.

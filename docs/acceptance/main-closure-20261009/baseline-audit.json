@@ -1,0 +1,206 @@
+{
+  "base": "0fe11ad3afb9e9a5eb789ba606fa65fd89b5a9d9",
+  "branch": "codex/merge-recommender-main-01",
+  "worktrees": "worktree /Users/yzliu/work/projects/hanamesh/hanamesh-recommender\nHEAD a0b3fe854cfbccbb9e0cdb85dff946bb632cd169\nbranch refs/heads/codex/consolidation-03-recommender\n\nworktree /Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/source\nHEAD 0fe11ad3afb9e9a5eb789ba606fa65fd89b5a9d9\nbranch refs/heads/codex/merge-recommender-main-01\n\nworktree /Users/yzliu/.cache/hanamesh-runs/METADATA-DEVKIT-VENDOR-RECOMMENDER-01/source\nHEAD 0fe11ad3afb9e9a5eb789ba606fa65fd89b5a9d9\nbranch refs/heads/codex/metadata-devkit-vendor-recommender-01\nprunable gitdir file points to non-existent location",
+  "rootManifest": {
+    "name": "hanamesh-recommender",
+    "version": "0.1.0-rc.5",
+    "description": "HanaMesh semantic recommendation client for DSH",
+    "type": "module",
+    "license": "MIT",
+    "engines": {
+      "node": "24.13.1"
+    },
+    "packageManager": "pnpm@10.33.0",
+    "main": "./dist/dsh.js",
+    "exports": {
+      ".": "./dist/dsh.js",
+      "./client": "./dist/client-ui.js",
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "dist",
+      "profile",
+      "docs/CONTEXT.md",
+      "README.md",
+      "LICENSE",
+      "AGENTS.md",
+      "docs/DEVKIT_VENDOR.md"
+    ],
+    "scripts": {
+      "build": "node scripts/build.mjs",
+      "prepack": "pnpm run build",
+      "test": "node --test --test-reporter=tap test/*.test.mjs",
+      "test:mutation": "node scripts/mutations.mjs",
+      "verify:pack": "pnpm run pack:artifact && node scripts/verify-pack.mjs",
+      "check": "pnpm run check:toolchain && pnpm run preflight && pnpm run build && pnpm test && pnpm run test:mutation && pnpm run verify:pack",
+      "mock": "node scripts/mock-server.mjs",
+      "check:toolchain": "node scripts/check-toolchain.mjs",
+      "preflight": "node scripts/preflight.mjs",
+      "pack:artifact": "mkdir -p artifacts && npm pack --ignore-scripts --pack-destination artifacts"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": ">=4.0.2 <5",
+      "@deepseek-ai/dsh-client-connection": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-host-webserver": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-storage-domain": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
+      "react": "18.3.1",
+      "zod": "4.5.4",
+      "@hanamesh/devkit": "0.1.0-rc.2"
+    },
+    "devDependencies": {
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+      "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+      "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+      "react": "18.3.1",
+      "zod": "4.5.4",
+      "@hanamesh/devkit": "file:vendor/hanamesh-devkit-0.1.0-rc.2.tgz"
+    },
+    "dsh": {
+      "bundle": {
+        "patch": "./profile/cordis.patch.yml"
+      },
+      "client": {
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-settings",
+          "@deepseek-ai/dsh-client-ui-sidebar"
+        ],
+        "platform": "web",
+        "external": [
+          "react"
+        ]
+      }
+    },
+    "hanamesh": {
+      "module": "recommender",
+      "dshTarget": "0.1.5-alpha.1"
+    },
+    "peerDependenciesMeta": {
+      "@hanamesh/devkit": {
+        "optional": true
+      }
+    }
+  },
+  "allTrackedManifests": [
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-package.json",
+    "package.json"
+  ],
+  "allTrackedLocks": [
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-pnpm-lock.yaml",
+    "docs/acceptance/metadata-devkit-vendor-rc5/new-lock.log",
+    "pnpm-lock.yaml"
+  ],
+  "subpackageManifests": [
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-package.json"
+  ],
+  "note": "consumer-package.json and consumer-pnpm-lock.yaml under docs/acceptance are immutable historical evidence, not workspace packages/importers",
+  "trackedFiles": [
+    ".gitignore",
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "SHA256SUMS",
+    "devkit.config.mjs",
+    "docs/CONTEXT.md",
+    "docs/DEVKIT_VENDOR.md",
+    "docs/LEARNING.md",
+    "docs/acceptance/AC-RECOMMENDER.md",
+    "docs/acceptance/evidence/check.log",
+    "docs/acceptance/evidence/real-dsh-cua-summary.json",
+    "docs/acceptance/evidence/real-dsh-mock.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/README.md",
+    "docs/acceptance/metadata-devkit-vendor-rc5/archive-audit.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/baseline-check-fixed-env.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/baseline-check.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone-audit.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone-build.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone-install.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone-pack.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone-preflight.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/clone.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-closure.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-consumer.ts",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-frozen.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-install.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-js.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-negative.ts",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-package.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-pnpm-lock.yaml",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-probe.mjs",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-ts-negative.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-ts.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/input.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/mutation-results.json",
+    "docs/acceptance/metadata-devkit-vendor-rc5/new-check.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/new-install.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/new-lock.log",
+    "docs/acceptance/metadata-devkit-vendor-rc5/project-preflight.log",
+    "docs/acceptance/rc3-20260922/check-rc3.log",
+    "docs/acceptance/rc3-20260922/mock-alpha1/01-home-with-footer-action.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/02-panel-open.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/03-first-recommendation.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/04-constraint-localonly.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/05-install-market-or-degraded.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/06-alternatives.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/07-no-match.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/08-rate-limited.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/09-invoke-start-using.png",
+    "docs/acceptance/rc3-20260922/mock-alpha1/ui-gate-summary.json",
+    "docs/acceptance/rc3-20260922/real-dsh-host.json",
+    "docs/acceptance/recovery-20260921/check-rc2.log",
+    "docs/acceptance/recovery-20260921/mock-alpha1/01-home-with-footer-action.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/02-panel-open.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/03-first-recommendation.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/04-constraint-localonly.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/05-install-copied-command.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/06-alternatives.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/07-no-match.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/08-rate-limited.png",
+    "docs/acceptance/recovery-20260921/mock-alpha1/ui-gate-summary.json",
+    "docs/acceptance/recovery-20260921/plugin-add-alpha1.log",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/01-home-with-footer-action.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/02-panel-open.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/03-first-recommendation.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/04-constraint-localonly.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/05-install-copied-command.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/06-alternatives.png",
+    "docs/acceptance/recovery-20260921/real-host-alpha1/ui-gate-summary.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "profile/cordis.patch.yml",
+    "scripts/build.mjs",
+    "scripts/check-toolchain.mjs",
+    "scripts/mock-server.mjs",
+    "scripts/mutations.mjs",
+    "scripts/preflight.mjs",
+    "scripts/real-dsh-ui-gate.mjs",
+    "scripts/serve-real-dsh-mock.mjs",
+    "scripts/verify-pack.mjs",
+    "src/client-ui.js",
+    "src/constraints.js",
+    "src/context.js",
+    "src/domain.js",
+    "src/dsh.js",
+    "src/errors.js",
+    "src/history.js",
+    "src/market.js",
+    "src/open-external.js",
+    "src/remote.js",
+    "src/routes.js",
+    "test/client-ui.test.mjs",
+    "test/constraints.test.mjs",
+    "test/context.test.mjs",
+    "test/dsh.test.mjs",
+    "test/history.test.mjs",
+    "test/market.test.mjs",
+    "test/mock-remote.test.mjs",
+    "test/routes.test.mjs",
+    "vendor/SHA256SUMS",
+    "vendor/hanamesh-devkit-0.1.0-rc.1.tgz",
+    "vendor/hanamesh-devkit-0.1.0-rc.2.tgz"
+  ],
+  "runtimeDevkitImports": []
+}

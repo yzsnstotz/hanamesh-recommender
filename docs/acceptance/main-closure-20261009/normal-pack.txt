@@ -1,0 +1,41 @@
+
+> hanamesh-recommender@0.1.1-rc.1 prepack
+> pnpm run build
+
+
+> hanamesh-recommender@0.1.1-rc.1 build /Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/source
+> node scripts/build.mjs
+
+{"status":"PASS","node":"v24.13.1","pnpm":"pnpm/10.33.0","files":["client-ui.js","constraints.js","context.js","domain.js","dsh.js","errors.js","history.js","market.js","open-external.js","remote.js","routes.js"]}
+npm notice
+npm notice 📦  hanamesh-recommender@0.1.1-rc.1
+npm notice Tarball Contents
+npm notice 991B AGENTS.md
+npm notice 1.1kB LICENSE
+npm notice 3.5kB README.md
+npm notice 23.5kB dist/client-ui.js
+npm notice 2.1kB dist/constraints.js
+npm notice 1.1kB dist/context.js
+npm notice 648B dist/domain.js
+npm notice 3.3kB dist/dsh.js
+npm notice 383B dist/errors.js
+npm notice 1.2kB dist/history.js
+npm notice 2.0kB dist/market.js
+npm notice 640B dist/open-external.js
+npm notice 2.5kB dist/remote.js
+npm notice 8.5kB dist/routes.js
+npm notice 1.5kB docs/CONTEXT.md
+npm notice 1.6kB docs/DEVKIT_SUPPLY.md
+npm notice 2.4kB package.json
+npm notice 227B profile/cordis.patch.yml
+npm notice Tarball Details
+npm notice name: hanamesh-recommender
+npm notice version: 0.1.1-rc.1
+npm notice filename: hanamesh-recommender-0.1.1-rc.1.tgz
+npm notice package size: 21.5 kB
+npm notice unpacked size: 57.2 kB
+npm notice shasum: 905dd8644c256f99721627f74f09c57713b4492d
+npm notice integrity: sha512-IPMJks8/FNDyJ[...]hL00a8u3H3l5A==
+npm notice total files: 18
+npm notice
+hanamesh-recommender-0.1.1-rc.1.tgz

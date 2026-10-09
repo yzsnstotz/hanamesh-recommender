@@ -1,0 +1,49 @@
+{
+  "baseline": {
+    "exitCode": 0
+  },
+  "results": [
+    {
+      "id": "free-constraint",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "history-cap",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "origin-forwarding",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "uninstalled-plugin",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "missing-seat-method",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    },
+    {
+      "id": "details-seat",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "detected": true,
+      "assertionFailure": true
+    }
+  ]
+}

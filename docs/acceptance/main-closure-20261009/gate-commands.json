@@ -1,0 +1,121 @@
+[
+  {
+    "label": "normal-pack",
+    "args": [
+      "npm",
+      "pack",
+      "--pack-destination",
+      "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/release"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/source",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "label": "consumer-strict-install",
+    "args": [
+      "pnpm",
+      "install",
+      "--strict-peer-dependencies",
+      "--store-dir",
+      "/Users/yzliu/.cache/hanamesh-deps/pnpm-store"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/consumer",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "label": "consumer-frozen",
+    "args": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--strict-peer-dependencies",
+      "--store-dir",
+      "/Users/yzliu/.cache/hanamesh-deps/pnpm-store"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/consumer",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "label": "consumer-js",
+    "args": [
+      "node",
+      "probe.mjs"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/consumer",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "label": "consumer-ts",
+    "args": [
+      "pnpm",
+      "exec",
+      "tsc",
+      "--strict",
+      "--skipLibCheck",
+      "false",
+      "--allowJs",
+      "true",
+      "--checkJs",
+      "false",
+      "--maxNodeModuleJsDepth",
+      "10",
+      "--module",
+      "NodeNext",
+      "--moduleResolution",
+      "NodeNext",
+      "--target",
+      "ES2024",
+      "--noEmit",
+      "consumer.ts"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/consumer",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "label": "consumer-ts-negative",
+    "args": [
+      "pnpm",
+      "exec",
+      "tsc",
+      "--strict",
+      "--skipLibCheck",
+      "false",
+      "--allowJs",
+      "true",
+      "--checkJs",
+      "false",
+      "--maxNodeModuleJsDepth",
+      "10",
+      "--module",
+      "NodeNext",
+      "--moduleResolution",
+      "NodeNext",
+      "--target",
+      "ES2024",
+      "--noEmit",
+      "negative.ts"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/consumer",
+    "exit": 2,
+    "expected": 2
+  },
+  {
+    "label": "fresh-strict-frozen",
+    "args": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--strict-peer-dependencies",
+      "--store-dir",
+      "/Users/yzliu/.cache/hanamesh-deps/pnpm-store"
+    ],
+    "cwd": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/fresh-strict",
+    "exit": 0,
+    "expected": 0
+  }
+]
