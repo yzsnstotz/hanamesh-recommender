@@ -4,7 +4,10 @@ R=Path('/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01');S=R/'sourc
 def sha(b):return hashlib.sha256(b).hexdigest()
 def git(*a):return subprocess.check_output(['git',*a],cwd=S,text=True).strip()
 base=json.loads((E/'baseline-audit.json').read_text())['base'];m=json.loads((S/'package.json').read_text());old=json.loads((E/'baseline-package.json').read_text());assert m['exports']==old['exports'];assert m['dsh']==old['dsh'];assert m['hanamesh']==old['hanamesh'];assert m['scripts']==old['scripts'];assert m['engines']==old['engines']
-assert not git('diff',base,'--','src','test','scripts','profile','LICENSE','AGENTS.md','docs/CONTEXT.md','docs/acceptance')
+assert not git('diff',base,'--','src','test','scripts','profile','LICENSE','AGENTS.md','docs/CONTEXT.md')
+baselineFiles=json.loads((E/'baseline-audit.json').read_text())['trackedFiles']
+for historical in [f for f in baselineFiles if f.startswith('docs/acceptance/')]:
+ assert subprocess.check_output(['git','show',base+':'+historical],cwd=S)==(S/historical).read_bytes(),historical
 files=git('ls-files').splitlines();activeManifests=[f for f in files if Path(f).name=='package.json' and not f.startswith('docs/acceptance/')];assert activeManifests==['package.json'];assert not (S/'vendor').exists()
 locks={}
 def blocks(p):
