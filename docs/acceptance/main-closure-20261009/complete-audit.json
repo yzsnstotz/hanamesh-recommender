@@ -1,0 +1,623 @@
+{
+  "base": "0fe11ad3afb9e9a5eb789ba606fa65fd89b5a9d9",
+  "activeManifests": [
+    "package.json"
+  ],
+  "subpackageManifests": [],
+  "modulesManifests": [],
+  "activeLocks": [
+    "pnpm-lock.yaml"
+  ],
+  "historicalEvidenceManifests": [
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-package.json"
+  ],
+  "historicalEvidenceLocks": [
+    "docs/acceptance/metadata-devkit-vendor-rc5/consumer-pnpm-lock.yaml",
+    "docs/acceptance/metadata-devkit-vendor-rc5/new-lock.log"
+  ],
+  "rootDependencyGroups": {
+    "dependencies": {},
+    "peerDependencies": {
+      "@deepseek-ai/cordis": ">=4.0.2 <5",
+      "@deepseek-ai/dsh-client-connection": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-host-webserver": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-storage-domain": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-client-ui-settings": ">=0.1.5-alpha.1 <0.2.0",
+      "@deepseek-ai/dsh-client-ui-sidebar": ">=0.1.5-alpha.1 <0.2.0",
+      "react": "18.3.1",
+      "zod": "4.5.4"
+    },
+    "peerDependenciesMeta": {},
+    "optionalDependencies": {},
+    "devDependencies": {
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-client-connection": "0.1.5-alpha.1",
+      "@deepseek-ai/dsh-host-webserver": "0.1.5-alpha.1",
+      "@deepseek-ai/dsh-storage-domain": "0.1.5-alpha.1",
+      "react": "18.3.1",
+      "zod": "4.5.4",
+      "@hanamesh/devkit": "git+https://github.com/yzsnstotz/hanamesh-server-shared.git#semver:^0.2.0&path:/packages/devkit"
+    }
+  },
+  "toolchainPinsPreserved": true,
+  "businessSrcTestScriptsProfileLicenseContextUnchanged": true,
+  "thirdPartySourceLockPackagesSnapshotsUnchanged": true,
+  "locks": {
+    "source": {
+      "sha256": "834f3c9a663d0823fd8d68e5eadf3b1362effb468b7e58385424dfa59d999891",
+      "privatePackages": [
+        "@hanamesh/devkit@git+https"
+      ],
+      "identity": false,
+      "registry": false,
+      "overrides": false
+    },
+    "freshStrict": {
+      "sha256": "fe7a0640a23611b7c29f2328e2560a4ce0cff994c7e857cce8f31649ddb4753c",
+      "privatePackages": [
+        "@hanamesh/devkit@git+https"
+      ],
+      "identity": false,
+      "registry": false,
+      "overrides": false
+    },
+    "consumer": {
+      "sha256": "d03510c1fbfc64b155c806245eee1828ee7432354d6848479ee56083b7cb85a7",
+      "privatePackages": [],
+      "identity": false,
+      "registry": false,
+      "overrides": false
+    }
+  },
+  "devkit": {
+    "name": "@hanamesh/devkit",
+    "version": "0.2.0",
+    "singleRealRoot": "/Users/yzliu/.cache/hanamesh-runs/MERGE-RECOMMENDER-MAIN-01/source/node_modules/.pnpm/@hanamesh+devkit@git+https+++git@github.com+yzsnstotz+hanamesh-server-shared.git+8f9bcc_475cb15388da91190edc44b32ea237ac/node_modules/@hanamesh/devkit",
+    "installedFiles": {
+      "LICENSE": "242b0b71d3a4a91899ccf38fb70f06d151f3f005c3d7ac7d1e4a6c0461dc0e2d",
+      "CHANGELOG.md": "f2ad40aa93536be0626dd967a341c692906a943ef859d0e93cb7f62cec838214",
+      "LICENSE_RECORD.md": "29303a17afb4483258afc77ab8801b9fa52d85adcf77077cf181f0203a25c2a9",
+      "README.md": "a2c3e63a81a35960005aec2b3219ca068bd98102526579ea54b84d2043fa8a50",
+      "package.json": "c660f88899bcd7e871047f83cb6232c8a192d42ffc718bcdd0f1e4e559087ae8",
+      "contract/suite.mjs": "3b15c2fc64a0eb093427cfa214d26e4c1b566084b300a92fb2270923342a9328",
+      "contract/schema.json": "e67d14ce3317ec603cd80782e4e0019d06ca0986e0a65cb38f49023f44f30e91",
+      "contract/fixtures/consumer.json": "ca364e1dbe4ecd3685721d2cd891212713323bdd27c84087a8f11ac68b3d14e6",
+      "contract/fixtures/provider.json": "eed13df0b3cf5fec314b0fde5c1fa5a27a4ca244ad3d3b8399b45edcfa0d8003",
+      "bin/devkit.mjs": "124b8956f7397e9715d9b9de839058c21ac151fdf5fad6578c8b3ad156d3e5c0",
+      "src/verify-pack.mjs": "0f85c0d272093cc5de3c1aedc948d5f3163649cf207c34cdd1f80cb32b7abb0e",
+      "src/mutations.mjs": "1b9596250f3c68b054d8129d164e977034e24dbdaf36c5b193ccb51fee303a52",
+      "src/preflight.mjs": "9eec070e9770792ac8041888a998bf555cb8cb91375f15e0ecf59a84d3d98cf2",
+      "src/index.mjs": "b997b9b14c09496cf0e579abdb7e4f82f3c8b2a5d4dff649c481a53b76e7794a",
+      "src/check-toolchain.mjs": "323b364c45869bc37ced8bea0445b77f209bd339a562ec10a30f7247478ac37f"
+    },
+    "exports": {
+      ".": "./src/index.mjs",
+      "./mutations": "./src/mutations.mjs",
+      "./preflight": "./src/preflight.mjs",
+      "./verify-pack": "./src/verify-pack.mjs",
+      "./check-toolchain": "./src/check-toolchain.mjs",
+      "./contract": "./contract/suite.mjs",
+      "./contract/schema.json": "./contract/schema.json",
+      "./contract/fixtures/*": "./contract/fixtures/*"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "runtimeDependencyOrPeer": false,
+    "spec": "git+https://github.com/yzsnstotz/hanamesh-server-shared.git#semver:^0.2.0&path:/packages/devkit",
+    "sourceMainAndPeeledTag": "8f9bcc69cbacf01d97ffe63bbbade4f865e6dd89"
+  },
+  "runtimePrivateContracts": [],
+  "applicableContracts": {
+    "Devkit": "PASS (development only)",
+    "Identity 0.3 wallet uniqueness": "N/A: absent direct/peer/optional/dev, absent all active locks and installed public runtime closure, no wallet binding API",
+    "Registry": "N/A: absent direct/transitive",
+    "Lib Provision": "N/A: absent direct/transitive",
+    "AppHost": "N/A package dependency: duck-typed hanameshMarket seat unchanged",
+    "ServerUsage": "N/A: absent direct/transitive",
+    "Core": "N/A: absent direct/transitive"
+  },
+  "normalPack": {
+    "version": "0.1.1-rc.1",
+    "sha256": "9be8da84a04d4b7d9c0a0552f0645e88ad2d189ad3eb55d24c2e7fd5aa5ad317",
+    "members": {
+      "package/LICENSE": {
+        "sha256": "a9592d3a90c386e8d5d45d87a9ce8590105d0a799044a8af16f6b26ccb64be69",
+        "size": 1078,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/client-ui.js": {
+        "sha256": "ca00d37dec766d68d56fb16ab0bb1b1ae06a5f8fa5f655c8927736890153bf0e",
+        "size": 23547,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/constraints.js": {
+        "sha256": "c936a265116a3c80775cc901dc9ea08e336842e6f7c786dbdc5fd00c5a899ba8",
+        "size": 2087,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/context.js": {
+        "sha256": "68466bb8a6f95c0d4a84529e810c88e7772150299484669a02b345202f4f1e27",
+        "size": 1068,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/domain.js": {
+        "sha256": "e4fbb15b3a72edf2f752456845c9da776420ffcb3bb5d1f23101c9e1213ea965",
+        "size": 648,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/dsh.js": {
+        "sha256": "f025c3c52f11624cc831c11d67a5eeecc72c852fefbec8830b1f956cc4ca0133",
+        "size": 3307,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/errors.js": {
+        "sha256": "ec2774eed7cec814da79e705c904b2fba5c90bb9469bec247c5e6dde364f9a46",
+        "size": 383,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/history.js": {
+        "sha256": "7e88d7e51e3f0f8dd8494ac038e9f55f6268bd646793532bebb3a1926907d0c1",
+        "size": 1183,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/market.js": {
+        "sha256": "5b26403e1222b5d75409ae82bd783d3ec6a5265e37a6ccddd4e2c051c367eacb",
+        "size": 1976,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/open-external.js": {
+        "sha256": "c265bf9e475c391549ec55e976d12b875740479ccc01ed805f0c14adffa72919",
+        "size": 640,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/remote.js": {
+        "sha256": "d9600293fbe65f28461331e76873112b67a312819596dfc3543341b8c55fd645",
+        "size": 2550,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/routes.js": {
+        "sha256": "dcffc73e8d03943a2c41c81fc7f8bbe2b6384ab6da6b226c089eab38b8016ebb",
+        "size": 8509,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/package.json": {
+        "sha256": "f93251f32f985e6e418e661802e172160e185abed67858b09c50d73c48fd7ec5",
+        "size": 2446,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/AGENTS.md": {
+        "sha256": "5866b13434aca254e647457b3579e56687358553468e97697c467c8d54e0b7d3",
+        "size": 991,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/docs/CONTEXT.md": {
+        "sha256": "a12281c7fb7b2d9210b2e959df97d6c4c4f0d9d1c313022f2017ee5f2152a7fa",
+        "size": 1497,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/docs/DEVKIT_SUPPLY.md": {
+        "sha256": "427ef9ffe3b913201f74d391ef3b891e7716c43f46d2df2391fe614d4dc7a568",
+        "size": 1582,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/README.md": {
+        "sha256": "0eabb6c5b06db016931a80bbbbc3eaff27d9659d23b1be1d41751f27f3c639ff",
+        "size": 3490,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/profile/cordis.patch.yml": {
+        "sha256": "f62dc32aede9b1072f37a20a6e4bd7a0c95694af3f80d16ae5d790c52963c3b6",
+        "size": 227,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      }
+    },
+    "baselineMembers": {
+      "package/LICENSE": {
+        "sha256": "a9592d3a90c386e8d5d45d87a9ce8590105d0a799044a8af16f6b26ccb64be69",
+        "size": 1078,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/client-ui.js": {
+        "sha256": "ca00d37dec766d68d56fb16ab0bb1b1ae06a5f8fa5f655c8927736890153bf0e",
+        "size": 23547,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/constraints.js": {
+        "sha256": "c936a265116a3c80775cc901dc9ea08e336842e6f7c786dbdc5fd00c5a899ba8",
+        "size": 2087,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/context.js": {
+        "sha256": "68466bb8a6f95c0d4a84529e810c88e7772150299484669a02b345202f4f1e27",
+        "size": 1068,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/domain.js": {
+        "sha256": "e4fbb15b3a72edf2f752456845c9da776420ffcb3bb5d1f23101c9e1213ea965",
+        "size": 648,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/dsh.js": {
+        "sha256": "f025c3c52f11624cc831c11d67a5eeecc72c852fefbec8830b1f956cc4ca0133",
+        "size": 3307,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/errors.js": {
+        "sha256": "ec2774eed7cec814da79e705c904b2fba5c90bb9469bec247c5e6dde364f9a46",
+        "size": 383,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/history.js": {
+        "sha256": "7e88d7e51e3f0f8dd8494ac038e9f55f6268bd646793532bebb3a1926907d0c1",
+        "size": 1183,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/market.js": {
+        "sha256": "5b26403e1222b5d75409ae82bd783d3ec6a5265e37a6ccddd4e2c051c367eacb",
+        "size": 1976,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/open-external.js": {
+        "sha256": "c265bf9e475c391549ec55e976d12b875740479ccc01ed805f0c14adffa72919",
+        "size": 640,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/remote.js": {
+        "sha256": "d9600293fbe65f28461331e76873112b67a312819596dfc3543341b8c55fd645",
+        "size": 2550,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/dist/routes.js": {
+        "sha256": "dcffc73e8d03943a2c41c81fc7f8bbe2b6384ab6da6b226c089eab38b8016ebb",
+        "size": 8509,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/package.json": {
+        "sha256": "f8d9557fa92561f367219f7fc117f4df4b4eb3bc21d143f07ae46f3d0254d0f4",
+        "size": 2519,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/AGENTS.md": {
+        "sha256": "5866b13434aca254e647457b3579e56687358553468e97697c467c8d54e0b7d3",
+        "size": 991,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/docs/CONTEXT.md": {
+        "sha256": "a12281c7fb7b2d9210b2e959df97d6c4c4f0d9d1c313022f2017ee5f2152a7fa",
+        "size": 1497,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/docs/DEVKIT_VENDOR.md": {
+        "sha256": "dcfd5e4c0d7f7988c2a6b2f74b453731ccfe599ef93d514ee00587b603471853",
+        "size": 1719,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/README.md": {
+        "sha256": "c9bf0867ca29a9a26269e3f232a5f7b2934960aa05cfea2b92385a108602c2a9",
+        "size": 3388,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      },
+      "package/profile/cordis.patch.yml": {
+        "sha256": "f62dc32aede9b1072f37a20a6e4bd7a0c95694af3f80d16ae5d790c52963c3b6",
+        "size": 227,
+        "mode": 420,
+        "mtime": 499162500,
+        "uid": 0,
+        "gid": 0,
+        "uname": "",
+        "gname": "",
+        "type": "0",
+        "linkname": "",
+        "pax_headers": {}
+      }
+    },
+    "unchangedMembers": [
+      "package/AGENTS.md",
+      "package/LICENSE",
+      "package/dist/client-ui.js",
+      "package/dist/constraints.js",
+      "package/dist/context.js",
+      "package/dist/domain.js",
+      "package/dist/dsh.js",
+      "package/dist/errors.js",
+      "package/dist/history.js",
+      "package/dist/market.js",
+      "package/dist/open-external.js",
+      "package/dist/remote.js",
+      "package/dist/routes.js",
+      "package/docs/CONTEXT.md",
+      "package/profile/cordis.patch.yml"
+    ],
+    "changedMembers": [
+      "package/README.md",
+      "package/package.json"
+    ],
+    "added": [
+      "package/docs/DEVKIT_SUPPLY.md"
+    ],
+    "removed": [
+      "package/docs/DEVKIT_VENDOR.md"
+    ],
+    "DevkitRuntimeAbsent": true
+  },
+  "noOverrideAliasLocalSourceCopy": true
+}

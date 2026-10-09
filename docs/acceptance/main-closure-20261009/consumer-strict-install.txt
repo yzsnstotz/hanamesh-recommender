@@ -1,0 +1,25 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 11, reused 10, downloaded 1, added 0
+Progress: resolved 12, reused 10, downloaded 1, added 0
+Progress: resolved 31, reused 30, downloaded 1, added 0
+Progress: resolved 32, reused 31, downloaded 1, added 0
+Packages: +36
+++++++++++++++++++++++++++++++++++++
+Progress: resolved 36, reused 35, downloaded 1, added 36, done
+
+dependencies:
++ @deepseek-ai/cordis 4.0.2 (4.0.4 is available)
++ @deepseek-ai/dsh-client-connection 0.1.5-alpha.1
++ @deepseek-ai/dsh-client-ui-settings 0.1.5-alpha.1
++ @deepseek-ai/dsh-client-ui-sidebar 0.1.5-alpha.1
++ @deepseek-ai/dsh-host-webserver 0.1.5-alpha.1
++ @deepseek-ai/dsh-storage-domain 0.1.5-alpha.1
++ hanamesh-recommender 0.1.1-rc.1
++ react 18.3.1 (19.3.0 is available)
++ zod 4.5.4 (4.6.5 is available)
+
+devDependencies:
++ @types/node 24.13.4 (26.6.4 is available)
++ typescript 5.9.3 (7.0.2 is available)
+
+Done in 10s using pnpm v10.33.0
