@@ -1,6 +1,6 @@
 - insert:
     - id: hanamesh-recommender
-      name: hanamesh-recommender
+      name: '@hanamesh/recommender'
       config:
         serverOrigin: https://api.hanamesh.com
         timeoutMs: 10000

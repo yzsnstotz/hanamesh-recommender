@@ -1,5 +1,5 @@
 /* DSH browser module. React is host-supplied; no provider SDK or sibling HanaMesh plugin is imported. */
-window.__ModuleLoader__.load({id:'hanamesh-recommender',factory:function(require){'use strict';
+window.__ModuleLoader__.load({id:'@hanamesh/recommender',factory:function(require){'use strict';
   const React=require('react'),h=React.createElement;
   const messages={
     zh:{title:'能力推荐',eyebrow:'HanaMesh · 语义决策',intro:'说出你要完成的任务。推荐只使用本机环境白名单，不读取对话历史或文件路径。',placeholder:'例如：分析这个仓库并修复 bug',send:'寻找能力',thinking:'正在匹配…',install:'安装并使用',details:'详情',alternatives:'其他选择',noMatch:'没有合适的',noMatchHint:'当前没有满足全部条件的首选项，你仍可查看候选。',compatibility:'兼容性',copyFailed:'复制失败，请手动复制命令。',close:'关闭',openPanel:'打开推荐面板',settingsTitle:'HanaMesh 推荐',settingsHint:'对话与推荐卡片在独立面板中打开；最近 20 次推荐摘要保存在本插件的 storage-domain。',retry:'请求过于频繁，请稍后重试。',empty:'请输入任务。',history:'最近推荐',stub:'STUB 模式',real:'服务端模式',select:'选择',inputLabel:'任务或追加条件',invoke:'开始用',marketMissing:'请先安装 HanaMesh 市场（app-host）。',installStarted:'已在 HanaMesh 市场开始安装。',restartRequired:'安装完成，需要重启 DSH 后才能使用。',pluginEnabled:'已启用，已为你新建会话。',appOpened:'已在 HanaMesh 市场打开该应用。',installHint:'安装命令（已复制）：',toastClose:'知道了'},
