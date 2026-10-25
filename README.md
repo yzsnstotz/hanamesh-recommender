@@ -1,5 +1,7 @@
 # hanamesh-recommender
 
+npm 安装入口：`dsh plugin --profile desktop add --save-exact @hanamesh/recommender@0.1.1-rc.2`。插件 id 仍为 `hanamesh-recommender`；独立安装，不属于 HanaMesh 套件，DSH peer 仍为 0.1.5-alpha.1 线。
+
 > `0.1.0-rc.3` · `🧪 DELIVERED`（本机 2026-09-22）· 推荐卡片三动作（详情 / 安装 / 开始用）改走 HanaMesh 市场（app-host）duck-typed 席位 `hanameshMarket`；席位缺失时可读降级。与 app-host rc.32 的真实联调 `NOT_RUN`；ACCEPTED 由用户给
 
 HanaMesh 的独立 DSH 推荐插件：Conversation + Recommendation Cards、白名单本地 context、追加约束重推、最近 20 次推荐摘要、三动作出口（详情 / 安装 / 开始用）与 feedback。

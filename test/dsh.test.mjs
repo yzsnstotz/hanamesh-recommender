@@ -9,7 +9,7 @@ function harness(){
   const domain={global:{get:()=>structuredClone(snapshot),set:async value=>{snapshot=structuredClone(value);}},close:async()=>{domain.closed=true;}};
   const ctx={
     storageDomain:{open:async spec=>{openedSpec=spec;return domain;}},
-    loader:{entries(){return [{id:'hanamesh-recommender',options:{name:'hanamesh-recommender'}}];}},
+    loader:{entries(){return [{id:'hanamesh-recommender',options:{name:'@hanamesh/recommender'}}];}},
     webServer:{port:41001},
     connection:{fetch:{register:spec=>{registered.push(spec);return()=>{spec.disposed=true;};}}},
     effect(run){effects.push(run());},
@@ -57,5 +57,17 @@ test('a context that refuses uninjected reads degrades instead of throwing', () 
 test('bundle patch stays one insert and carries configurable server origin', async () => {
   const patch=await import('node:fs/promises').then(fs=>fs.readFile(new URL('../profile/cordis.patch.yml',import.meta.url),'utf8'));
   assert.equal((patch.match(/^\s*- id:/gm)??[]).length,1);
-  assert.match(patch,/id: hanamesh-recommender/);assert.match(patch,/serverOrigin:/);
+  assert.match(patch,/id: hanamesh-recommender/);assert.match(patch,/name: '@hanamesh\/recommender'/);assert.match(patch,/serverOrigin:/);
+});
+
+// The client package key is separate from the persistent Cordis plugin identity.
+test('scoped client bundle resolves by package name while the plugin identity stays stable', async () => {
+  const {readFile}=await import('node:fs/promises');
+  const {runInNewContext}=await import('node:vm');
+  const {name}=await import('../src/dsh.js');
+  let module;
+  runInNewContext(await readFile(new URL('../src/client-ui.js',import.meta.url),'utf8'),{window:{__ModuleLoader__:{load:value=>module=value}}});
+  assert.equal(module.id,'@hanamesh/recommender');
+  assert.equal(typeof module.factory,'function');
+  assert.equal(name,'hanamesh-recommender');
 });

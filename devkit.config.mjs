@@ -9,11 +9,11 @@ const root = fileURLToPath(new URL('.', import.meta.url));
 const pkg = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
 const run = process.env.HANAMESH_RUN_DIR ?? join(tmpdir(), 'hanamesh-recommender-devkit');
 const devkitSpec = 'git+https://github.com/yzsnstotz/hanamesh-server-shared.git#semver:^0.2.0&path:/packages/devkit';
-const forbiddenSiblings = ['hanamesh-core', 'hanamesh-usage', '@hanamesh/dsh-app-host'];
+const forbiddenSiblings = ['hanamesh-core', 'hanamesh-usage', '@hanamesh/core', '@hanamesh/usage', '@hanamesh/dsh-app-host'];
 const required = ['dist/dsh.js', 'dist/client-ui.js', 'profile/cordis.patch.yml', 'docs/CONTEXT.md', 'README.md', 'LICENSE', 'AGENTS.md', 'docs/DEVKIT_SUPPLY.md'];
 
 function validateManifest(manifest, patch) {
-  assert.equal(manifest.name, 'hanamesh-recommender');
+  assert.equal(manifest.name, '@hanamesh/recommender');
   assert.equal(manifest.license, 'MIT');
   assert.equal(Object.hasOwn(manifest, 'private'), false);
   assert.match(manifest.version, /^0\.1\.\d+-rc\.\d+$/u);
@@ -60,7 +60,7 @@ export default {
     {id: 'missing-seat-method', file: 'src/market.js', from: '!packageName)return undefined;', to: '!packageName)return false;', test: 'test/routes.test.mjs', name: 'a seat without isInstalled answers false instead of deferring to the Loader'},
     {id: 'details-seat', file: 'src/routes.js', from: "if(market.has('open')&&Object.keys", to: 'if(false&&Object.keys', test: 'test/routes.test.mjs', name: 'details ignores the market seat'},
   ]},
-  'verify-pack': {root, tarball: `artifacts/${pkg.name}-${pkg.version}.tgz`, required,
+  'verify-pack': {root, tarball: `artifacts/${pkg.name.replace(/^@/, '').replace('/', '-')}-${pkg.version}.tgz`, required,
     forbidden: /(?:^package\/(?:test|scripts|vendor|node_modules|artifacts)\/)|(?:^package\/\.env$)/u,
     validate: async ({entries, read}) => {
       validateManifest(JSON.parse(read('package.json')), read('profile/cordis.patch.yml').toString());

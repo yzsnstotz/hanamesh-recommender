@@ -1,6 +1,6 @@
 {
-  "name": "hanamesh-recommender",
-  "version": "0.1.1-rc.1",
+  "name": "@hanamesh/recommender",
+  "version": "0.1.1-rc.2",
   "description": "HanaMesh semantic recommendation client for DSH",
   "type": "module",
   "license": "MIT",
