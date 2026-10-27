@@ -1,9 +1,13 @@
 {
   "name": "@hanamesh/recommender",
-  "version": "0.1.1-rc.2",
+  "version": "0.1.1-rc.3",
   "description": "HanaMesh semantic recommendation client for DSH",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzsnstotz/hanamesh-recommender.git"
+  },
   "engines": {
     "node": "24.13.1"
   },
