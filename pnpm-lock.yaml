@@ -28,8 +28,8 @@ importers:
         specifier: 0.1.5-alpha.1
         version: 0.1.5-alpha.1(@deepseek-ai/cordis@4.0.2)(@deepseek-ai/dsh-invariants@0.1.5-rc.2(@deepseek-ai/cordis@4.0.2))(@deepseek-ai/dsh-storage@0.1.5-rc.2(@deepseek-ai/cordis@4.0.2))
       '@hanamesh/devkit':
-        specifier: ^0.2.4
-        version: 0.2.4
+        specifier: ^0.2.6
+        version: 0.2.6
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -105,8 +105,8 @@ packages:
   '@deepseek-ai/schemastery@3.18.2':
     resolution: {integrity: sha512-njDtZsznjYxok7KLLlHOPyuv2efdWVbSflAHgztSfbMsg+CVraEoRe2DjOCgClYv3ZCSm7WXoaUkbB/+RY7tWQ==}
 
-  '@hanamesh/devkit@0.2.4':
-    resolution: {integrity: sha512-Gi9NoEfmiu4ID44vqJpxHj+YXklCDfZ3thRrIzhC4x7SakCO3+F1LtNMoDAI9syXv0jGw5wDxQRh/JjkWdxGOg==}
+  '@hanamesh/devkit@0.2.6':
+    resolution: {integrity: sha512-FTZhMLWz0zfJAHbQwOr6f/N3dSzdUS4w0oUuYs11TsmWEfa9cRvx2qpKa5brJvrPoouYcTz9JC9/iexOeJKNLA==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -253,7 +253,7 @@ snapshots:
       '@deepseek-ai/cosmokit': 1.8.3
       '@standard-schema/spec': 1.1.0
 
-  '@hanamesh/devkit@0.2.4': {}
+  '@hanamesh/devkit@0.2.6': {}
 
   '@standard-schema/spec@1.1.0': {}
 

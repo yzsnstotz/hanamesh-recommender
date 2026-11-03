@@ -8,7 +8,7 @@ import {tmpdir} from 'node:os';
 const root = fileURLToPath(new URL('.', import.meta.url));
 const pkg = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
 const run = process.env.HANAMESH_RUN_DIR ?? join(tmpdir(), 'hanamesh-recommender-devkit');
-const devkitSpec = '^0.2.4';
+const devkitSpec = '^0.2.6';
 const forbiddenSiblings = ['hanamesh-core', 'hanamesh-usage', '@hanamesh/core', '@hanamesh/usage', '@hanamesh/dsh-app-host'];
 const required = ['dist/dsh.js', 'dist/client-ui.js', 'profile/cordis.patch.yml', 'docs/CONTEXT.md', 'README.md', 'LICENSE', 'AGENTS.md', 'docs/DEVKIT_SUPPLY.md'];
 
